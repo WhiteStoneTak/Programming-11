@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Citation: https://forum.freecodecamp.org/t/functions-inside-objects/483646 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29E25</title>
+</head>
+<body>
+    <script>
+        var computer = {
+            name: "MyPC",
+            speed: 25,
+            turnedOn: false,
+            manufacturer: "TechCo",
+            os: "Linux",
+            info: function() { 
+                return this.name + ': Manufactured by ' + this.manufacturer + '. Running ' + this.os + '.';
+            },
+            turnOn: function() {
+                this.turnedOn = true;
+            },
+            turnOff: function() {
+                this.turnedOn = false;
+            },
+            isFast: function() {
+                return this.speed > 20;
+            }
+        };
+
+        console.log(computer.info());
+    </script>
+</body>
+</html>

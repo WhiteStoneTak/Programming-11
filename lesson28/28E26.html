@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Citation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28E26</title>
+</head>
+<body>
+    <script>
+        function bio(person) {
+            return "Hello, I'm " + person.name + " and I'm " + person.age + " years old. My favorite color is " + person.favColor + " and I live at " + person.address + ". Goodbye!";
+        }
+        
+        var person = {
+            name: "Bob",
+            age: 200,
+            favColor: "beige",
+            address: "the moon"
+        };
+        
+        console.log(bio(person));
+    </script>
+</body>
+</html>

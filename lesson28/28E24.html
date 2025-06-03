@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28E24</title>
+</head>
+<body>
+    <script>
+        function aroundV(vector) {
+            return [
+                [vector[0] - 1, vector[1]],
+                [vector[0] + 1, vector[1]],
+                [vector[0], vector[1] - 1],
+                [vector[0], vector[1] + 1]
+            ];
+        }
+        console.log(aroundV([10, 15]));
+    </script>
+</body>
+</html>

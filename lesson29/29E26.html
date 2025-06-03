@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29E26</title>
+</head>
+<body>
+    <button onclick="display({name: 'Sand', toughness: 0.22, texture: 'Rough'})">Button 1</button>
+    <button onclick="display({name: 'Water', toughness: 0.01, texture: 'Smooth'})">Button 2</button>
+    <button onclick="display({name: 'Rock', toughness: 10, texture: 'Hard'})">Button 3</button>
+    <button onclick="display({name: 'Soil', toughness: 0.5, texture: 'Grainy'})">Button 4</button>
+    <ul id="output"></ul>
+    <script>
+        function display(obj) {
+            document.getElementById("output").innerHTML = 
+                "<li>Name: " + obj.name + "</li><li>Toughness: " + obj.toughness+ "</li><li>Texture: " + obj.texture + "</li>";
+        }
+    </script>
+</body>
+</html>

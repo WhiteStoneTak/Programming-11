@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29E21</title>
+</head>
+<body>
+    <script>
+        function extract(str) {
+            var openBlancket = str.indexOf("(");
+            var closeBlancket = str.lastIndexOf(")");
+            return str.slice(openBlancket + 1, closeBlancket);
+        }
+
+        console.log(extract("abcde(fghij)klm"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Citation: https://stackoverflow.com/questions/51445672/how-to-store-and-access-objects-with-x-y-coordinates-by-x-y-value -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28E25</title>
+</head>
+<body>
+    <script>
+        function aroundVO(vector) {
+            return [
+                { x: vector.x - 1, y: vector.y },
+                { x: vector.x + 1, y: vector.y },
+                { x: vector.x, y: vector.y - 1 },
+                { x: vector.x, y: vector.y + 1 }
+            ];
+        }
+        console.log(aroundVO({ x: 10, y: 15 }));
+    </script>
+</body>
+</html>

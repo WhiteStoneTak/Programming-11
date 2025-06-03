@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Citation: https://www.geeksforgeeks.org/javascript-replace-multiple-strings-with-multiple-other-strings/ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29E27</title>
+</head>
+<body>
+    <script>
+        var shoppingList = "Apples, Bananas, Bread, Chocolate, Celery, Cookies, Beef";
+        var items = shoppingList.split(", ");
+        alert(items[0]);
+        alert(items[1].toUpperCase());
+        alert(items[3].replace(/a/g, "b").replace(/e/g, "c").replace(/i/g, "d"));
+    </script>
+</body>
+</html>

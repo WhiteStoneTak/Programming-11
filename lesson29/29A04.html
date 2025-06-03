@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29A04</title>
+</head>
+<body>
+    <h2>Never Create Strings as objects.</h2>
+    <p>JavaScript objects cannot be compared.</p>
+    <p id="demo"></p>
+    <script>
+        var x = new Srting("John"); // x is an object
+        var y = new String("John"); // y is an object
+        document.getElementById("demo").innerHTML = (x==y);
+    </script>
+</body>
+</html>
