@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24E03</title>
+    <style>
+        a {
+            color: blue;
+        }
+
+        a[href^="#"] {
+            background-color: gold;
+        }
+
+        a[href*="example"] {
+            background-color: silver;
+        }
+
+        a[href*="insensitive" i] {
+            color: cyan;
+        }
+
+        a[href$=".org"] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#internal">Internal link</a></li>
+        <li><a href="#example">Example link</a></li>
+        <li><a href="#insensitive">Insensitive internal link</a></li>
+        <li><a href="example.org">Example org link</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24E04</title>
+    <style>
+        [lang~="en-us"] {
+            color: blue;
+        }
+
+        [lang="pt"] {
+            color: green;
+        }
+
+        [lang|="zh"] {
+            font-family: sans-serif;
+            color: red;
+        }
+
+        [data-lang="zh-TW"][lang] {
+            color: purple;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div lang="ja en-us ar"><b>Toronto, Ontario</b></div>
+    <div lang="pt">Quebec City, Quebec</div>
+    <div lang="zh-HK"><b>Vancouver, British Columbia</b></div>
+    <div lang="zh-CN">Calgary, Alberta</div>
+    <div data-lang="zh-TW" lang="en">Ottawa, Ontario</div>
+</body>
+</html>

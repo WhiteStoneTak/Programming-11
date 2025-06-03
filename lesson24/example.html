@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        /* 親メニューのスタイル */
+        .dropdown-menu {
+            list-style-type: none; /* マーカーを非表示 */
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-menu > li {
+            position: relative; /* 子メニューを相対的に配置 */
+            display: inline-block; /* 水平方向に配置 */
+        }
+
+        .dropdown-menu > li > a {
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            background-color: #007bff; /* 青色 */
+            color: white;
+            border: 1px solid #0056b3; /* 枠線 */
+        }
+
+        .dropdown-menu > li > a:hover {
+            background-color: #0056b3; /* ホバー時の背景色 */
+        }
+
+        /* サブメニューのスタイル */
+        .dropdown-menu li ul {
+            list-style-type: none; /* マーカーを非表示 */
+            position: absolute; /* 親メニューの位置を基準に配置 */
+            top: 100%; /* 親メニューの下に配置 */
+            left: 0; /* 左端を揃える */
+            margin: 0;
+            padding: 0;
+            display: none; /* 初期状態は非表示 */
+            background-color: #007bff; /* 背景色 */
+            border: 1px solid #0056b3; /* 枠線 */
+        }
+
+        .dropdown-menu li ul li {
+            width: 200px; /* サブメニューの幅 */
+        }
+
+        .dropdown-menu li ul li a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-menu li ul li a:hover {
+            background-color: #0056b3;
+        }
+
+        /* ホバー時にサブメニューを表示 */
+        .dropdown-menu li:hover > ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Vision</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">Marketing</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
