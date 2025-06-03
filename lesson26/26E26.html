@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26E26</title>
+</head>
+<body>
+    <button type="button" onclick="myFunction1()">1</button>
+    <button type="button" onclick="myFunction2()">MZ</button>
+    <button type="button" onclick="myFunction3()">2</button>
+    <button type="button" onclick="myFunction4()">3</button>
+    <button type="button" onclick="myFunction5()">B</button>
+    <div id="floor"></div>
+    <ul id="list"></ul>
+    <script>
+        function myFunction1() {
+            document.getElementById("floor").innerHTML="You are on floor 1";
+            document.getElementById("list").innerHTML="<li>Grand Commons</li><li>Servery</li><li>Workshops</li><li>Entrance/Exit</li>";
+        }            
+        function myFunction2() {
+            document.getElementById("floor").innerHTML="You are on floor MZ";
+            document.getElementById("list").innerHTML="<li>Learning Commons</li>";
+        }            
+        function myFunction3() {
+            document.getElementById("floor").innerHTML="You are on floor 2";
+            document.getElementById("list").innerHTML="<li>Classrooms</li><li>Stairs</li>";
+        }        
+        function myFunction4() {
+            document.getElementById("floor").innerHTML="You are on floor 3";
+            document.getElementById("list").innerHTML="<li>Classrooms</li><li>Room3020</li><li>THE BEE ROOM</li>";
+        }        
+        function myFunction5() {
+            document.getElementById("floor").innerHTML="You are on floor ???";
+            document.getElementById("list").innerHTML="<li>Secret NWSS Basemet</li><li>???</li><li>[Information Redacted]</li>";
+        }        
+    </script>
+</body>
+</html>

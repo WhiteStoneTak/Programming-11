@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25E11</title>
+    <style>
+        ol {
+            font-size: 21px;
+            counter-reset: section;
+            /* list-style-type: none; */
+            list-style-type: disc; /* I will follow the picture */
+        }
+
+        li::before {
+            font-size: 21px;
+            counter-increment: section;
+            content: counters(section, ".")" ";
+        }
+
+        .first {
+            list-style-position: outside;
+        }
+
+        .second {
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+    <ol class="first">
+        <li>first list item comes first</li>
+        <li>second list item comes second</li>
+        <ol class="second">
+            <li>first list item comes first</li>
+            <li>second list item comes second</li>
+        </ol>
+    </ol>
+</body>
+</html>

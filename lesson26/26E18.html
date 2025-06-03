@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26E18</title>
+</head>
+<body>
+    <!-- I can't find this image. Ask for this later. -->
+    <img src="nwss.jpg" alt="New Westminster Secondary School">
+    <div id="button">
+        <button type="button" onclick="myFunction1()">Show me my schedule</button>
+    </div>
+    <p id="info"></p>
+    <script>
+        function myFunction1() {
+            document.getElementById("button").innerHTML="<button type='button' onclick='myFunction2()'>A Block</button><button type='button' onclick='myFunction3()'>B Block</button><button type='button' onclick='myFunction4()'>C Block</button><button type='button' onclick='myFunction5()'>D Block</button>";
+        }
+
+        function myFunction2() {
+            document.getElementById("info").innerHTML="Subject: Math <br>Room: 100<br>Teacher: Mr. A ";
+        }                
+
+        function myFunction3() {
+            document.getElementById("info").innerHTML="Subject: Science <br>Room: 200<br>Teacher: Mr. B";
+        }            
+
+        function myFunction4() {
+            document.getElementById("info").innerHTML="Subject: English <br>Room: 300<br>Teacher: Mr. C";
+        }            
+
+        function myFunction5() {
+            document.getElementById("info").innerHTML="Subject: Programming <br>Room: 400<br>Teacher: Mr. L";
+        }            
+    </script>
+</body>
+</html>

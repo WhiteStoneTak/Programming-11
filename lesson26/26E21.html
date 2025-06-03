@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26E21</title>
+</head>
+<body>
+    <h1 id="interactive">Interactive Webpage</h1>
+    <button type="button" onclick="myFunction1()">Left</button>
+    <button type="button" onclick="myFunction2()">Right</button>
+    <button type="button" onclick="myFunction3()">Center</button>
+    <button type="button" onclick="myFunction4()">Show</button>
+    <button type="button" onclick="myFunction5()">Hide</button>    
+    <script>
+        function myFunction1() {
+            document.getElementById("interactive").style.textAlign="left";
+        }
+
+        function myFunction2() {
+            document.getElementById("interactive").style.textAlign="right";
+        }
+
+        function myFunction3() {
+            document.getElementById("interactive").style.textAlign="center";
+        }
+
+        function myFunction4() {
+            document.getElementById("interactive").style.visibility="visible";
+        }
+
+        function myFunction5() {
+            document.getElementById("interactive").style.visibility="hidden";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25E09</title>
+    <style>
+        ol {
+            counter-reset: listcounter;
+        }
+
+        li {
+            counter-increment: listcounter;
+        }
+
+        li::after {
+            content: "["counter(listcounter)"] == ["counter(listcounter, upper-roman)"]";
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</body>
+</html>

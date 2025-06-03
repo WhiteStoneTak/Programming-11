@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26E02</title>
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image">
+        <img src="https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-26/pic_bulboff.gif" alt="bulboff">
+    </div>
+    <button type="button" onclick="myFunction1()">Turn on the light</button><br>
+    <button type="button" onclick="myFunction2()">Turn off the light</button>
+    <script>
+        function myFunction1() {
+            document.getElementById("image").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-26/pic_bulbon.gif' alt='bulbon'>";
+        }
+
+        function myFunction2() {
+            document.getElementById("image").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-26/pic_bulboff.gif' alt='bulboff'>";
+        }
+    </script>
+</body>
+</html>

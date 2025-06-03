@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25E15</title>
+    <style>
+        body {
+            background: orange;
+            counter-reset: mega-step, mini-step;
+        }
+
+        section {
+            width: 20%;
+            float: left;
+            margin: 20px;
+            background: white;
+            counter-increment: mega-step;
+            padding: 5px;
+        }
+
+        section::before {
+            content: counter(mega-step, upper-roman);
+            display: block;
+            padding: 10px;
+            background-color: orange;
+            width: 10%;
+            color: white;
+            text-align: center;
+        }
+
+        ol {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        li {
+            counter-increment: mini-step;
+        }
+        
+        li::before {
+            content: counter(mini-step)". ";
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <ol>
+            <li>Go to store</li>
+            <li>Go to meat counter</li>
+            <li>Ask butcher for skirt steak</li>
+        </ol>
+    </section>
+    <section>
+        <ol>
+            <li>Drive home</li>
+            <li>Park safely</li>
+            <li>Start grill</li>
+        </ol>
+    </section>
+    <section>
+        <ol>
+            <li>Marinate steak</li>
+            <li>Put on grill</li>
+            <li>Wait 8 minutes and flip</li>
+        </ol>
+    </section>
+    <section>
+        <ol>
+            <li>Bring steak inside</li>
+            <li>Wait 10 minutes</li>
+            <li>Eat</li>
+        </ol>
+    </section>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26E25</title>
+    <style>
+        h1, p, li, img {
+            border: 1px solid red;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="myFunction1()" id="h1">This is my page!</h1>
+    <p onclick="myFunction2()" id="p1">I like dogs.</p>
+    <p onclick="myFunction3()" id="p2">I have a bird.</p>
+    <p onclick="myFunction4()" id="p3">I like to ski.</p>
+    <ul>My favorite food
+        <li onclick="myFunction5()" id="li1">Sushi</li>
+        <li onclick="myFunction6()" id="li2">Dumplings</li>
+        <li onclick="myFunction7()" id="li3">Pizza</li>
+    </ul>
+    <img src="https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-14/canada.png" alt="canada" onclick="myFunction8()" id="img">
+    <script>
+        function myFunction1() {
+            document.getElementById("h1").style.visibility="none";
+        }
+        function myFunction2() {
+            document.getElementById("p1").style.visibility="none";
+        }
+        function myFunction3() {
+            document.getElementById("p2").style.visibility="none";
+        }
+        function myFunction4() {
+            document.getElementById("p3").style.visibility="none";
+        }
+        function myFunction5() {
+            document.getElementById("li1").style.visibility="none";
+        }
+        function myFunction6() {
+            document.getElementById("li2").style.visibility="none";
+        }
+        function myFunction7() {
+            document.getElementById("li3").style.visibility="none";
+        }
+        function myFunction8() {
+            document.getElementById("img").style.visibility="none";
+        }
+    </script>
+</body>
+</html>

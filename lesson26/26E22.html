@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26E22</title>
+    <style>
+        #more_buttons1, #more_buttons2, #more_buttons3 {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="dogs">I like dogs.</h1>
+    <button type="button" onclick="myFunction1()">Red</button>           
+    <button type="button" onclick="myFunction2()">Blue</button>     
+    <button type="button" onclick="myFunction3()">Green</button>            
+    <!-- It says "appear" Use visibility:visible; -->
+    <div id="more_buttons1">
+        <button type="button" onclick="myFunction4()">Yellow</button><br>                
+        <button type="button" onclick="myFunction5()">Orange</button><br>   
+        <button type="button" onclick="myFunction1()">Red</button>                 
+    </div>
+    <div id="more_buttons2">
+        <button type="button" onclick="myFunction6()">Pink</button><br>        
+        <button type="button" onclick="myFunction7()">Purple</button><br>        
+        <button type="button" onclick="myFunction2()">Blue</button>            
+    </div>
+    <div id="more_buttons3">
+        <button type="button" onclick="myFunction8()">Cyan</button><br>            
+        <button type="button" onclick="myFunction3()">Green</button><br>            
+        <button type="button" onclick="myFunction9()">Lime</button>        
+    </div>
+    <script>
+        function myFunction1() {
+            document.getElementById("dogs").style.color="red";                
+            document.getElementById("more_buttons1").style.visibility="visible";
+            document.getElementById("more_buttons2").style.visibility="hidden";
+            document.getElementById("more_buttons3").style.visibility="hidden";
+        }
+
+        function myFunction2() {
+            document.getElementById("dogs").style.color="blue";            
+            document.getElementById("more_buttons1").style.visibility="hidden";
+            document.getElementById("more_buttons2").style.visibility="visible";
+            document.getElementById("more_buttons3").style.visibility="hidden";
+        }
+
+        function myFunction3() {
+            document.getElementById("dogs").style.color="green";            
+            document.getElementById("more_buttons1").style.visibility="hidden";
+            document.getElementById("more_buttons2").style.visibility="hidden";
+            document.getElementById("more_buttons3").style.visibility="visible";
+        }
+
+        function myFunction4() {
+            document.getElementById("dogs").style.color="yellow";            
+        }
+
+        function myFunction5() {
+            document.getElementById("dogs").style.color="orange";            
+        }
+
+        function myFunction6() {
+            document.getElementById("dogs").style.color="pink";
+        }        
+
+        function myFunction7() {
+            document.getElementById("dogs").style.color="purple";
+        }        
+
+        function myFunction8() {
+            document.getElementById("dogs").style.color="cyan";
+        }        
+
+        function myFunction9() {
+            document.getElementById("dogs").style.color="lime";
+        }            
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26E15</title>
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="color">Colours</h1>
+    <div id="image-button">
+        <button type="button" onclick="myFunction1()">red</button>
+        <button type="button" onclick="myFunction2()">blue</button>
+        <!-- These two bottons are not working -->
+        <!-- It was solved, pay attention to function name/spell (Jan.7) -->
+        <button type="button" onclick="myFunction3()">green</button>
+        <button type="button" onclick="myFunction4()">purple</button>
+    </div>
+    <script>
+        function myFunction1() {
+            document.getElementById("image-button").innerHTML="<img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-24/red.jpg'><button type='button' onclick='myFunction2()'>blue</button><button type='button' onclick='myFunction3()'>green</button><button type='button' onclick='myFunction4()'>purple</button>";
+            document.getElementById("color").style.color="red";
+        }   
+
+        function myFunction2() {
+            document.getElementById("image-button").innerHTML="<button type='button' onclick='myFunction1()'>red</button><img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-24/blue.jpg'><button type='button' onclick='myFunction3()'>green</button><button type='button' onclick='myFunction4()'>purple</button>";
+            document.getElementById("color").style.color="blue";
+        }
+
+        function myFunction3() {
+            document.getElementById("image-button").innerHTML="<button type='button' onclick='myFunction1()'>red</button><button type='button' onclick='myFunction2()'>blue</button><img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-24/green.jpg'><button type='button' onclick='myFunction4()'>purple</button>";
+            document.getElementById("color").style.color="green";
+        }   
+
+        function myFunction4() {
+            document.getElementById("image-button").innerHTML="<button type='button' onclick='myFunction1()'>red</button><button type='button' onclick='myFunction2()'>blue</button><button type='button' onclick='myFunction3()'>green</button><img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-22/purple.png'>";
+            document.getElementById("color").style.color="purple";
+        }
+    </script>
+</body>
+</html>

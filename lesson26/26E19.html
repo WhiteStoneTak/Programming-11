@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26E19</title>
+</head>
+<body>
+    <h1>Hang the picture frame</h1>
+    <!-- I can't find this image. Ask for this later. -->
+    <img src="frame.png" alt="frame" style="width:50px;position:relative;" id="image"><br>
+    <button type="button" onclick="myFunction1()">Move Right</button>
+    <button type="button" onclick="myFunction2()">Move Left</button>
+    <script>
+        function myFunction1() {
+            document.getElementById("image").style.left="100px";
+        }
+
+        function myFunction2() {
+            document.getElementById("image").style.left="10px";
+        }
+    </script>
+</body>
+</html>

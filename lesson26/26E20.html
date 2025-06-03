@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26E20</title>
+    <style>
+        button {
+            position: relative;
+        }
+
+        #btn2 {
+            visibility: hidden;
+            top: 100px;
+            left: 100px;
+        }
+
+        #btn3 {
+            visibility: hidden;
+            top: 300px;
+            left: 0;
+        }
+
+        #btn4 {
+            visibility: hidden;
+            top: 200px;
+            left: 500px;
+        }
+
+        #btn5 {
+            visibility: hidden;
+            top: 50px;
+            left: 600px;
+        }
+    </style>
+</head>
+<body>
+    <!-- It's saying "disappear" and "appear." Use visibility:hidden; / visibility:visible; -->
+    <button type="button" onclick="myFunction1()" id="btn1">Click here</button>
+    <button type="button" onclick="myFunction2()" id="btn2">Here!</button>
+    <button type="button" onclick="myFunction3()" id="btn3">I mean here</button>
+    <button type="button" onclick="myFunction4()" id="btn4">Try Again</button>
+    <div id="div5">
+        <button type="button" onclick="myFunction5()" id="btn5">Last time, I promise</button>
+    </div>
+    <script>
+        function myFunction1() {
+            document.getElementById("btn2").style.visibility="visible";
+            document.getElementById("btn1").style.visibility="hidden";
+        }
+
+        function myFunction2() {
+            document.getElementById("btn3").style.visibility="visible";
+            document.getElementById("btn2").style.visibility="hidden";
+        }
+
+        function myFunction3() {
+            document.getElementById("btn4").style.visibility="visible";
+            document.getElementById("btn3").style.visibility="hidden";
+        }
+
+        function myFunction4() {
+            document.getElementById("btn5").style.visibility="visible";
+            document.getElementById("btn4").style.visibility="hidden";
+        }
+
+        function myFunction5() {
+            document.getElementById("btn5").style.visibility="hidden";
+            document.getElementById("div5").innerHTML="<h1>Good job you know how to click buttons</h1>"
+        }
+    </script>
+</body>
+</html>

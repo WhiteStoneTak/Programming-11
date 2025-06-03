@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25E06</title>
+    <style>
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid silver;
+            border-radius: 4px;
+        }
+
+        .left {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        form {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <!-- I'm not sure how to give them space. -->
+        <p>First Name</p>
+        <p>Last Name</p>
+        <p>Country</p>
+        <p>Subject</p>
+    </div>
+    <form>
+        <input type="text" name="first_name" id="first_name" placeholder="Your name...">
+        <input type="text" name="last_name" id="last_name" placeholder="Your last name...">
+        <select name="country" id="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+        <textarea name="subject" id="subject">Write something...</textarea>
+    </form>
+    <button type="button">Submit</button>
+</body>
+</html>

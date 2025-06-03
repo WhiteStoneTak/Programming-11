@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Check this code later. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25E14</title>
+    <style>
+        ol {
+            counter-reset: my-awesome-counter;
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        /* instruction said both ol and li but check this later. */
+        /* I follow to the picture that is shown. */
+        li {
+            counter-increment: my-awesome-counter;
+            display: flex;
+            width: 50%;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        
+        li::before {
+            content: "0" counter(my-awesome-counter);
+            font-weight: bold;
+            font-size: 50px;
+            margin-right: 10px;
+            font-family: "Abril Fatface", serif;
+            line-height: 1;
+        }
+
+        body {
+            padding: 20px;
+            font-family: sans-serif;
+            background-color: violet;
+            color: lavender;
+        }
+
+        h1 {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <ol><h1>Top 4 highest <br>grossing movies <br>of all time:</h1>
+        <li>
+            Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team 
+            the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.
+        </li>
+        <li>
+            Avatar is a 2009 American epic science fiction film directed, written, produced, and co-edited by James 
+            Cameron and stars Sam Worthington, Zoe Saldana, Stephen Lang, Michelle Rodriguez, and Sigoumey Wheaver. 
+        </li>
+        <li>
+            Titanic is a 1997 American epic romance and disaster film directed, written, co-produced, and co-edited 
+            by James Cameron. Incorporating both historical and fictionalized aspects. the film is based on accounts 
+            of the sinking of the RMS Titanic, and stars Leonardo DiCaprio and Kate Winslet as members of different 
+            social classes who fall in love aboard the ship during its ill-fated maiden voyage.
+        </li>
+        <li>
+            Star Wars: The Force Awakens (also known as Star Wars: Episode VII - The Force Awakens) is
+            2015 American space opera film produced, co-written and directed by J. J. Abrams. It is the first
+            installment in the Star Wars sequel trilogy, following the story of Return of the Jedi (1983), and is
+            the seventh episode of the nine-part "Skywalker saga".
+        </li>
+    </ol>
+</body>
+</html>

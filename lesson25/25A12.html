@@ -1,0 +1,38 @@
+
+<html>
+<head>
+<title>25A12</title>
+<style>
+ol {
+Counter-reset: section;
+list-style-type: none;
+}
+li::before {
+counter-increment: section;
+content: counters (section, ".") "";
+}
+</style>
+</head>
+<body>
+<01>
+<li>item</li>
+<li>item
+<ol>
+<li>item</li> <li>item</li>
+<li>item
+<ol>
+<li>item</li>
+<li>item</li>
+<li>item</li>
+</ol></li>
+<li>item</li>
+</ol></li>
+<li>item</li>
+<li>item</li>
+</ol>
+<02>
+<li>item</li>
+<li>item</li>
+</ol>
+</body>
+</html>

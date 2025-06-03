@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25E05</title>
+    <style>
+        h1 {
+            color: skyblue;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            display: inline-block;
+            border: 2px solid gray;
+            padding: 5px;
+            font-size: 15px;
+        }
+
+        .book {
+            background-color: skyblue;
+            color: white;
+            font-size: 30px;
+            width: 15%;
+        }
+
+        .book:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>FIND A ROOM</h1>
+    <form>
+        <label for="name">Name*</label>
+        <input type="text" name="name" id="name" placeholder="Your name...">
+        <label for="phone">Phone*</label>
+        <input type="text" name="phone" id="phone" placeholder="Phone...">
+        <label for="check_in">Check-in*</label>
+        <input type="text" name="checkin" id="check_in" placeholder="Time and date...">
+        <label for="check_out">Check-out*</label>
+        <input type="text" name="checkout" id="check_out" placeholder="Time and date...">
+        <label for="adults">Adults*</label>
+        <input type="text" name="adults" id="adults" placeholder="Number of adults...">
+        <label for="children">Children*</label>
+        <input type="text" name="children" id="children" placeholder="Number of children...">
+        <input type="checkbox" name="agreement" id="agreement">
+        <label for="agreement">No one rejects, dislikes, or avoids pleasure itself.</label>
+    </form>
+    <div class="book">BOOK ROOM</div>
+</body>
+</html>

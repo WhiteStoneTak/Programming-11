@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25E24</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: orange;
+        }
+
+        header {
+            background-color: pink;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* I used article selector insted of p selector */
+        article {
+            float: left;
+            padding: 10px;
+            width: 50%;
+            background-color: lightblue;
+        }
+
+        aside {
+            padding: 10px;
+            float: left;
+            width: 25%;
+            background-color: yellow;
+        }
+
+        /* I will use ::after instead of :after */
+        section::after {
+            content: ""; /* I will add this */
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <section>
+        <!-- I will use aside tag instead of div.side -->
+        <aside>
+            <h2>All about arts</h2>
+            <p>
+                The NWSS Drama department provides students with exciting opportunities to develop and 
+                explore the dramatic arts. Students study improvisation, stage movement, vocal 
+                technique, character development, script writing and production. Every second year a 
+                major musical is cast and produced by staff and students at NWSS and performed in the 
+                historic MASSEY THEATRE. Stage plays are produced in off musical years and range from 
+                dramatic to comedic. Senior Drama students take part in NWSS' anti-bullying campaign 
+                called "ROCKSOLID". Since 2004 NWSS drama has partnered with the NWPD to help end bullying. 
+                Drama and creative writing students write and perform plays to help bring change and to 
+                create bully-free communities. New in 2016, NWSS drama students also have opportunities to 
+                travel to NYC and other future locations to see plays.
+            </p>
+        </aside>
+        <!-- I will use aside tag instead of div.side -->
+        <article>
+            <h2>New Westminster Secondary School</h2>
+            <p>
+                New Westminster Secondary School is a secondary school in New Westminster, British Columbia, 
+                Canada. It is one of the largest high schools in British Columbia. Enrolments of students is open to 
+                those within grades 9 through 12. The school is home to the International Baccalaureate program, 
+                facilities such as an Automotive shop, and a 1 year apprenticeship program. In 2007, the Fraser 
+                Institute ranked the school well within the top 50 secondary schools in British Columbia. This was out 
+                of the 279 public and private secondary schools operating in the province. The School is located in 
+                Metro Vancouver in BC's Lower Mainland region while the campus is centrally located within the region on the 
+                north side of the city of New Westminster. It encompasses an area of three city blocks by 
+                two city blocks.
+            </p>
+        </article>
+        <aside>
+            <h2>History</h2>
+            <p>
+                Prior to the 1860s the site of the present school was a public cemetery where many of the prominent 
+                citizens of New Westminster were interred. After development in the 1870s the remains of those buried 
+                were transferred to the Fraser Cemetery, located elsewhere in the city. During the Second World War 
+                the corner of 10th Avenue and 8th, where the present school is located, was leased to the Federal 
+                Government. The site served as a soldiers' barracks, used for training and housing the Royal 
+                Westminster Regiment. After World War Il, the barracks were moved to the University of British Columbia 
+                and the rest of the cemetery was demolished. Finally, in 1948 The public works yard was moved and the 
+                site was transferred to the New Westminster School Board for the construction of offices and a new high school.
+            </p>
+        </aside>
+    </section>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25E13</title>
+    <style>
+        ol {
+            counter-reset: my-awesome-counter;
+            /* added this to make it simmiler to the picture */
+            list-style: none;
+        }
+
+        ol, li {
+            margin-top: 1em;
+            counter-increment: my-awesome-counter;
+        }
+
+        ol::before, li::before {
+            content: counter(my-awesome-counter)". ";
+            color: red;
+            font-weight: bold;
+        }
+
+        h1 {
+            background-color: silver;
+            margin-left: 40px;
+        }
+
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: yellow;
+        }
+
+        .avater {
+            color: orange;
+        }
+
+        .titanic {
+            color: blue;
+            font-style: italic;
+        }
+
+        .star_wars {
+            color: brown;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top 4 highest grossing movies of all time:</h1>
+    <ol>
+        <!-- I didn't add <li> on this paragraph to follow "Your <ol> and <li> should both have my-awesome- counter for counter-increment, counter(my-awesome-counter) ". " for content, red text color and bold font-weight." -->
+        Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team 
+        the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.
+        <li class="avater">
+            Avatar is a 2009 American epic science fiction film directed, written, produced, and co-edited by James 
+            Cameron and stars Sam Worthington, Zoe Saldana, Stephen Lang, Michelle Rodriguez, and Sigoumey Wheaver. 
+        </li>
+        <li class="titanic">
+            Titanic is a 1997 American epic romance and disaster film directed, written, co-produced, and co-edited 
+            by James Cameron. Incorporating both historical and fictionalized aspects. the film is based on accounts 
+            of the sinking of the RMS Titanic, and stars Leonardo DiCaprio and Kate Winslet as members of different 
+            social classes who fall in love aboard the ship during its ill-fated maiden voyage.
+        </li>
+        <li class="star_wars">
+            Star Wars: The Force Awakens (also known as Star Wars: Episode VII - The Force Awakens) is
+            2015 American space opera film produced, co-written and directed by J. J. Abrams. It is the first
+            installment in the Star Wars sequel trilogy, following the story of Return of the Jedi (1983), and is
+            the seventh episode of the nine-part "Skywalker saga".
+        </li>
+    </ol>
+</body>
+</html>
