@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18E19</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        img {
+            border: 2px solid yellow;
+        }
+
+        span {
+            color: white;
+        }
+
+        body > img {
+            width: 250px;
+        }
+
+        span.first {
+            border-style: dashed;
+        }
+
+        img[alt="granada"] {
+            /* Search some better selectors */
+            width: 200px;
+        }
+
+        span.second {
+            border-style: inset;
+        }
+
+        img[alt="island"] {
+            width: 150px;
+        }
+
+        span.third {
+            border-style: double;
+        }
+
+        img[alt="madrid"] {
+            width: 100px;
+        }
+
+        span.fourth {
+            border-style: groove;
+        }
+    </style>
+</head>
+<body>
+    <img src="image/barcelona.jpg" alt="barcelona">
+    <span class="first">BARCELONA</span>
+    <p>
+    <img src="image/granada.jpg" alt="granada">
+    <span class="second">GRANADA</span>
+    <p>
+    <img src="image/island.jpg" alt="island">
+    <span class="third">SPANISH ISLANDS</span>
+    <p>
+    <img src="image/madrid.jpg" alt="madrid">
+    <span class="fourth">MADRID</span>
+</body>
+</html>
