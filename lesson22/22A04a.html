@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22A04a</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            float: left;
+            width: 33.33%;
+            padding: 50px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p>Float boxes side by side:</p>
+    <div class="clearfix">
+        <div class="box" style="background-color: #bbb;">
+            <p>Italy</p>
+        </div>
+        <div class="box" style="background-color:#ccc">
+            <p>Forest</p>
+        </div>
+        <div class="box" style="background-color:#ddd">
+            <p>Mountains</p>
+        </div>
+    </div>
+</body>
+</html>

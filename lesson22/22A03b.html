@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22A03b</title>
+    <style>
+        div {
+            border: 3px solid #4caf50;
+            padding: 5px;
+        }
+
+        .img1{
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .img2 {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        In this example, the image is taller than the element containing it, 
+    </p>
+    <div>
+        <h2>Without Clearfix</h2>
+        <img src="image/pineapple.jpg" alt="pineapple" class="img1" width="170" height="170">
+        The pineapple is  a tropical plant with an edible fruit, also called a pineapple, and the 
+        most economically significant plant in the family Bromeliaceae.
+    </div>
+    <p style="clear: right;">
+        Add a clearfix class with overflow: auto; to the containing element, to fix this problem:
+    </p>
+    <div class="clearfix">
+        <h2>With Clearfix</h2>
+        <img src="image/pineapple.jpg" alt="pineapple" width="170" height="170" class="img2">
+        In the 20C, Hawaii was a dominant producer of pineapples, 
+        especially for the US, but in 2016, Costa Rica, Brazil, and the Philippines, accounted for 
+        nearly one-third of the world's production of pineapples.
+    </div>
+</body>
+</html>
