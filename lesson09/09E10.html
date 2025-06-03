@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>09E10</title>
+        <style>
+            #title {
+                font-size: 30pt;
+                position: absolute;
+                left: 210px;
+            }
+
+            #text1, #text2 {
+                font-size: 18pt;
+                position: absolute;
+                top: 150px;
+                left: 300px;
+                visibility: hidden;
+            }
+
+            #text3 {
+                font-size: 18pt;
+                color: red;
+                position: absolute;
+                top: 250px;
+                left: 85px;
+            }
+
+            #text4 {
+                font-size: 18pt;
+                color: blue;
+                position: absolute;
+                top: 250px;
+                left: 430px;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div id="title">
+            Do you like DHTML?
+        </div>
+        <div id="text1">
+            Hurray, that makes me happy!
+        </div>
+        <div id="text2">
+            Get yourself outta here!
+        </div>
+        <div id="text3" onclick="document.getElementById('text1').style.visibility='visible'; document.getElementById('text2').style.visibility='hidden';">
+            Click here if you love it!
+        </div>
+        <div id="text4" onclick="document.getElementById('text2').style.visibility='visible'; document.getElementById('text1').style.visibility='hidden';">
+            Click here if you hate it!
+        </div>
+    </body>
+</html>

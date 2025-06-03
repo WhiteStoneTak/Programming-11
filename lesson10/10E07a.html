@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Tyler1</title>
+        <style>
+            BODY {
+                background-image: url('https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-10/blackswan.jpg');
+                color: white;
+                float: none;
+            }
+
+            A {
+                color: white;
+                text-decoration: underline overline;
+            }
+
+            ADDRESS {
+                color: yellow;
+            }
+
+            .title {
+                text-align: center;
+                color: #C8F0FF;
+                font-size: 30pt;
+            }
+
+            .title:hover {
+                color: green;
+            }
+
+            .image {
+                text-align: right;
+            }
+
+            .content {
+                width: 100%;
+            }
+
+            .reload {
+                text-align: right;
+
+            }
+
+            #tyler2 {
+                visibility: hidden;
+            }
+            
+            #click1, #click2 {
+                font-size: 20pt;
+                width: 100%;
+                height: 1.669rem;
+                position: relative;
+            }
+
+            #click1 {
+                left: 60px;
+            }
+
+            #click2 {
+                left: 20px;
+            }
+
+            #click1:hover {
+                background-color: red;
+            }
+
+            #click2:hover {
+                background-color: blue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            Tyler1
+        </div>
+        <q>You Have No Mana!!</q><br />
+        <div class="image">
+            <img src="image/tyler1.jfif" alt="tyler1" id="tyler1"><br />
+            <img src="image/tyler2.jfif" alt="tyler2" id="tyler2">
+        </div>
+        <div class="content">
+            <blockquote>
+                <address>
+                Born: March 7, 1995 <br />
+                Career: LoL Twitch Streamer <br />
+                Nickname: The most toxic player in North America
+                </address>
+            </blockquote>
+            <div id="click1" onclick="document.getElementById('tyler1').style.visibility='hidden';">Click me!</div>
+            <div id="click2" onclick="document.getElementById('tyler2').style.visibility='visible';">Then, Click me!</div>
+            <div class="reload">
+                <a href="10E07a.html">Click me to reload the page!</a>
+            </div>
+        </div>
+    </body>
+</html>
