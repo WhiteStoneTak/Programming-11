@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34E26</title>
+</head>
+<body>
+    <script>
+        class Paper {
+            constructor(content) {
+                if (typeof content !== 'string') throw new Error('Content must be a string');
+                this.content = content;
+            }
+
+            read() {
+                return this.content;
+            }
+
+            erase() {
+                this.content = '';
+            }
+
+            write(newContent) {
+                if (typeof newContent !== 'string') throw new Error('Content must be a string');
+                this.content = newContent;
+            }
+
+            fold() {
+                var mid = Math.floor(this.content.length / 2);
+                this.content = this.content.slice(0, mid);
+            }
+        }
+
+        class Printer {
+            constructor(name, model, paperCount) {
+                if (typeof name !== 'string' || typeof model !== 'string' || typeof paperCount !== 'number') {
+                    throw new Error('Invalid input');
+                }
+                this.name = name;
+                this.model = model;
+                this.paperCount = paperCount;
+            }
+
+            addPaper(count) {
+                if (typeof count !== 'number') throw new Error('Paper count must be a number');
+                this.paperCount += count;
+            }
+
+            print(content) {
+                if (this.paperCount <= 0) return null;
+                this.paperCount -= 1;
+                return new Paper(content);
+            }
+
+            toString() {
+                return this.name + " - " + this.model;
+            }
+        }
+
+        const printer = new Printer("SuperPrinter", "A205", 1);
+        const paper = printer.print("Hello there!");
+        console.log(paper); 
+        console.log(paper);
+    </script>
+</body>
+</html>

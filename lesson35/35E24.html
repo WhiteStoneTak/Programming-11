@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35E24</title>
+</head>
+<body>
+    <script>  
+        const countFlowers = (inputText) => {
+        const lines = inputText.split(/\r?\n/);
+        let flowerCount = 0; 
+        let i = 0;   
+
+        while (i <= lines.length - 3) {
+            const firstLine  = lines[i];
+            const secondLine = lines[i + 1];
+            const thirdLine  = lines[i + 2];
+
+            if (firstLine.indexOf('^') === -1) {
+            i++; 
+            continue;
+            }
+
+            if (secondLine.indexOf('<o>') === -1) {
+            i++;
+            continue;
+            }
+
+            if (thirdLine.indexOf('v') === -1) {
+            i++;
+            continue;
+            }
+
+            flowerCount++;
+            i += 3;
+        }
+
+        return flowerCount;
+        };
+
+
+        const sampleText1 = 
+        `...^..fajfjak
+        ,,.<o>.ajf@ja
+        .afjvfjajdfj@`;
+
+        console.log(countFlowers(sampleText1));
+
+
+        const sampleText2 =  
+        `^,, , ; ,^;,, ^ ,..........
+         , ^,, ; <o> ; , ; ,  ^; , , v ,
+         ,<o>,,, ^v, v   , , <o> <o> ,
+         , v.....::;::;::.....v:.:.:.:.:v.`;
+
+        console.log(countFlowers(sampleText2));
+    </script>
+</body>
+</html>

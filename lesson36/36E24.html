@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>36E24</title>
+</head>
+<body>
+  <script>
+    class WeatherReport {
+      constructor(temperature, weather, windSpeed) {
+        this.temperature = temperature;
+        this.weather = weather;
+        this.windSpeed = windSpeed;
+      }
+
+      get temperatureString() {
+        if (this.temperature <= 0) return "Freezing";
+        if (this.temperature <= 10) return "Very Cold";
+        if (this.temperature <= 20) return "Cold";
+        if (this.temperature <= 30) return "Warm";
+        if (this.temperature <= 40) return "Hot";
+        return "Sweltering";
+      }
+
+      report() {
+        return "The current weather report: " + this.temperature + " degrees (" + this.temperatureString + "). Current Weather: " + this.weather + ". Wind Speed: " + this.windSpeed + " km/h.";
+      }
+    }
+
+    const weather = new WeatherReport(25, "Sunny", 15);
+    console.log(weather.report());
+  </script>
+
+</body>
+</html>

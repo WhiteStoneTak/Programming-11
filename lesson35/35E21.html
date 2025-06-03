@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35E21</title>
+</head>
+<body>
+    <script>
+        function cc(num) {
+            return num % 2 === 0 ? num / 2 : num * 3 + 1;
+        }
+
+        function nf(num) {
+            var count = 0;
+            while (num !== 1) {
+                num = cc(num);
+                count++;
+            }
+            return count;
+        }
+
+        console.log(cc(10));
+        console.log(cc(20));
+        console.log(nf(10));
+        console.log(nf(44));
+    </script>
+</body>
+</html>

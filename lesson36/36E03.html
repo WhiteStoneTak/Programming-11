@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36E03</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        var numbers = [63, 8, 19, 23, 49];
+        var result = '';
+        numbers.forEach(num => result += num + ' '); // num => result + ' ' is the same as function myFunction(num){return result += num + ' '}
+        document.getElementById("output").innerText = result.trim();
+    </script>
+</body>
+</html>

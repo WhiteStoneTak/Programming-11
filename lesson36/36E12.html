@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36E12</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        function checkArrays(arr1, arr2) {
+            return arr1.some(num => num < 30) && arr2.some(num => num < 30);
+        }
+        document.getElementById("output").innerHTML = checkArrays([2], [20]);
+    </script>
+</body>
+</html>

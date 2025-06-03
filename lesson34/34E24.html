@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34E24</title>
+</head>
+<body>
+    <script>
+        class Dice {
+            constructor(sides) {
+                if (typeof sides !== 'number' || sides < 2) {
+                    throw new Error('Invalid number of sides. It must be a number >= 2.');
+                }
+                this.sides = sides; 
+                this._history = []; 
+            }
+
+            roll() {
+                const result = Math.floor(Math.random() * this.sides) + 1;
+                this._history.push(result); 
+                return result;
+            }
+
+            history() {
+                return this._history; 
+            }
+
+            clearHistory() {
+                this._history = [];
+            }
+
+            get shape() {
+                switch (this.sides) {
+                    case 2:
+                        return "Coin";
+                    case 4:
+                        return "Tetrahedron";
+                    case 8:
+                        return "Octahedron";
+                    case 12:
+                        return "Dodecahedron";
+                    case 20:
+                        return "Icosahedron";
+                    default:
+                        return this.sides > 1000 ? "Sphere" : "Unknown";
+                }
+            }
+        }
+
+        const c = new Dice(2);
+        console.log("Roll 1:", c.roll()); 
+        console.log("History:", c.history()); 
+
+        console.log("Roll 2:", c.roll());
+        console.log("History after 2 rolls:", c.history()); 
+
+        c.clearHistory();
+        console.log("History after clearing:", c.history()); 
+
+        console.log("Shape:", c.shape); 
+
+        const d = new Dice(10000000);
+        console.log("Roll:", d.roll()); 
+        console.log("Shape:", d.shape); 
+
+        const e = new Dice(60);
+        console.log("Shape:", e.shape); 
+    </script>
+</body>
+</html>

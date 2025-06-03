@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34E22</title>
+</head>
+<body>
+    <script>
+        class Country {
+            constructor(name, population, flagColors) {
+                this._name = name;
+                this._population = population;
+                this._flagColors = flagColors.map(color => color.toLowerCase()); 
+            }
+
+            get name() {
+                return this._name;
+            }
+
+            get population() {
+                return this._population;
+            }
+
+            get flagColors() {
+                return [...this._flagColors];
+            }
+
+            increasePopulation(amount) {
+                if (typeof amount !== 'number') {
+                    throw new Error('Input must be a number');
+                }
+                this._population += amount;
+            }
+
+            decreasePopulation(amount) {
+                if (typeof amount !== 'number') {
+                    throw new Error('Input must be a number');
+                }
+                this._population -= amount;
+            }
+
+            verifyFlag(colors) {
+                return colors.every(color => 
+                    this._flagColors.includes(color.toLowerCase())
+                );
+            }
+        }
+
+        const canada = new Country("Canada", 122334, ["red", "white"]);
+        console.log(canada.verifyFlag(["red", "white"]));
+        console.log(canada.verifyFlag(["red", "red", "red", "white", "red", "white", "red", "red", "red"]));
+        console.log(canada.verifyFlag(["red", "white", "red", "blue"])); 
+        console.log(canada.verifyFlag(["red", "wHiTe", "red", "RED"])); 
+        console.log(canada.population); 
+        
+        try {
+            canada.increasePopulation("108"); 
+        } catch (error) {
+            console.error(error.message);
+        }
+
+        try {
+            canada.decreasePopulation([1, 2, 3]); 
+        } catch (error) {
+            console.error(error.message);
+        }
+
+        canada.increasePopulation(100);
+        console.log(canada.population); 
+        canada.decreasePopulation(200);
+        console.log(canada.population); 
+        canada.population = 8; 
+        canada.flagColors = [];
+        console.log(canada.population); 
+        console.log(canada.flagColors); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    Citation:
+        https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+        https://www.w3schools.com/css/css3_gradients.asp
+        http://w3schools.com/css/css3_animations.asp
+        https://rgbacolorpicker.com/
+        https://www.w3schools.com/css/css3_2dtransforms.asp
+        https://www.sitepoint.com/css-viewport-units-quick-start/
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Victory</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right, #1e3a8a, #3b82f6);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .container h1 {
+            font-size: 32px;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .container button {
+            margin-top: 16px;
+            padding: 8px 16px;
+            font-size: 13px;
+            color: #1e3a8a;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .container button:hover {
+            background-color: #dbeafe;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Takumi won the challenge against all odds.</h1>
+        <button id="actionButton" onclick="myFunction()">Celebrate</button>
+    </div>
+    <script>
+        function myFunction() {
+            alert('Congratulations! He truly overcame all odds!');
+        }
+    </script>
+</body>
+</html>

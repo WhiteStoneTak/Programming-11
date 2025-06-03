@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>36E22</title>
+</head>
+<body>
+  <script>
+    function version(n1, n2, n3) {
+      const isValid = (n) =>
+        typeof n === "number" && !isNaN(n) && Number.isInteger(n) && n >= 0 && n <= 100;
+
+      if (!isValid(n1) || !isValid(n2) || !isValid(n3)) {
+        throw new Error("Invalid input: All parameters must be integers between 0 and 100.");
+      }
+
+      return `${n1}.${n2}.${n3}`;
+    }
+
+    try {
+      console.log(version(2, 3, 11)); 
+    } catch (error) {
+      console.error(error.message);
+    }
+  </script>
+</body>
+</html>

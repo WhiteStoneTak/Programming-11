@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35E26</title>
+</head>
+<body>
+    <script>
+        function fillWithFlowers(input) {
+            let current = input;
+            while (true) {
+                const updated = insertFlower(current);
+                if (updated === current) break;
+                current = updated;
+            }
+            return current;
+        }
+
+        function insertFlower(input) {
+            const lines = input.split("\n");
+            for (let i = 0; i < 100; i++) {
+                const row = Math.floor(Math.random() * lines.length);
+                const col = Math.floor(Math.random() * lines[row].length);
+                if (lines[row].substr(col, 3) === "   ") {
+                    lines[row] = lines[row].slice(0, col) + "^<o>v" + lines[row].slice(col + 3);
+                    return lines.join("\n");
+                }
+            }
+            return input;
+        }
+
+        const input = `
+            .........
+            .........
+            .........
+        `;
+        console.log(fillWithFlowers(input));
+    </script>
+</body>
+</html>

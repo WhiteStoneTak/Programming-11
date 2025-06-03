@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32E24</title>
+</head>
+<body>
+    <script>
+        function oneLetterKeys(obj) {
+            var result = {};
+            for (var key in obj) {
+                if (key.length === 1) {
+                    result[key] = obj[key];
+                }
+            }
+            return result;
+        }
+
+        var obj = {a: 2, b: 3, cd: 4, de: 5, ef: 6, fg: 7, h: 8, i: 9};
+        console.log(oneLetterKeys(obj));
+    </script>
+</body>
+</html>

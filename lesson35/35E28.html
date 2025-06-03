@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35E28</title>
+</head>
+<body>
+    <script>
+        function markInteriorCharacters(input) {
+            const lines = input.split("\n").map(line => line.split(""));
+            const rows = lines.length;
+            const cols = lines[0].length;
+
+            const result = lines.map(line => [...line]);
+
+            for (let i = 1; i < rows - 1; i++) {
+                for (let j = 1; j < cols - 1; j++) {
+                    if (lines[i][j] === "#") {
+                        if (lines[i - 1][j] === "#" &&
+                            lines[i + 1][j] === "#" &&
+                            lines[i][j - 1] === "#" &&
+                            lines[i][j + 1] === "#") {
+                            result[i][j] = "@";
+                        }
+                    }
+                }
+            }
+
+            return result.map(line => line.join("")).join("\n");
+        }
+
+        const input = `
+            #############
+            #############
+            ### ##### ###
+            #############
+            #############
+        `;
+        console.log(markInteriorCharacters(input));
+    </script>
+</body>
+</html>

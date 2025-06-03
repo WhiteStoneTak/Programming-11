@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34E10</title>
+</head>
+<body>
+    <h1>Car Info</h1>
+    <p>Enter your car's brand:</p>
+    <input type="text" id="carBrand" placeholder="Enter car brand">
+    <button onclick="createCar()">Create Car</button>
+    <h2>Car Details:</h2>
+    <p id="output"></p>
+    <script>
+        class Car {
+            constructor(brand, model, year) {
+                this.carname = brand;
+                this.model = model;
+                this.year = year;
+            }
+            getCarDetails() {
+                return this.year + " " + this.carname + " " + this.model;
+            }
+        }
+
+        function createCar() {
+            var brand = document.getElementById("carBrand").value;
+            if (brand == "") {
+                alert("Please enter a car brand!");
+                return;
+            }
+            let car = new Car(brand, "Mustang", 2025);
+            document.getElementById("output").innerHTML = "You created a new car: <strong>" + car.getCarDetails() + "</strong>";
+        }
+    </script>
+</body>
+</html>

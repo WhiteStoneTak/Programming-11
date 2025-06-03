@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36E23</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        class Box {
+            constructor(items) {
+                if (!Array.isArray(items) || items.some(item => typeof item !== 'string' && !(item instanceof Box))) {
+                    throw new Error("Invalid items");
+                }
+                this.items = items;
+            }
+
+            addItem(item) {
+                if (item === this || (typeof item !== 'string' && !(item instanceof Box))) {
+                    throw new Error("Invalid item");
+                }
+                this.items.push(item);
+            }
+
+            serialize() {
+                return JSON.stringify(this.items);
+            }
+
+            static deserialize(json) {
+                const parsed = JSON.parse(json);
+                return new Box(parsed);
+            }
+        }
+
+        const myBox = new Box(["apple", "banana"]);
+        myBox.addItem("cherry");
+        const serialized = myBox.serialize();
+        document.getElementById("output").textContent = serialized;
+    </script>
+</body>
+</html>

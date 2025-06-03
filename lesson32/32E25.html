@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32E25</title>
+</head>
+<body>
+    <script>
+        function flipObject(obj) {
+            var result = {};
+            for (var key in obj) {
+                result[obj[key]] = key;
+            }
+            return result;
+        }
+
+        var obj1 = {a: 2, b: 4, c: "t"};
+        console.log(flipObject(obj1));
+
+        var obj2 = {a: 2, b: undefined, c: null, d: true, e: 2};
+        console.log(flipObject(obj2));
+    </script>
+</body>
+</html>

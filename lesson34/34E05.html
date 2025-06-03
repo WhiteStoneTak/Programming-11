@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34E05</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        var person = {
+            firstName: "April",
+            lastName: "May",
+            id: 34,
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        document.getElementById("output").innerHTML = person.fullName();
+    </script>
+</body>
+</html>

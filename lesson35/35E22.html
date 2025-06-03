@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35E22</title>
+</head>
+<body>
+    <script>
+        class Moveable {
+            constructor(x, y) {
+                if (typeof x !== 'number' || isNaN(x)) {
+                    throw new Error('Invalid x');
+                }
+                if (typeof y !== 'number' || isNaN(y)) {
+                    throw new Error('Invalid y');
+                }
+
+                this._x = x;
+                this._y = y;
+                this._direction = 'up';
+            }
+
+            getX() {
+                return this._x;
+            }
+
+            setX(value) {
+                if (typeof value !== 'number' || isNaN(value)) {
+                    throw new Error('Invalid x');
+                }
+                this._x = value;
+            }
+
+            getY() {
+                return this._y;
+            }
+
+            setY(value) {
+                if (typeof value !== 'number' || isNaN(value)) {
+                    throw new Error('Invalid y');
+                }
+                this._y = value;
+            }
+
+            getDirection() {
+                return this._direction;
+            }
+
+            forward(steps) {
+                if (typeof steps !== 'number') {
+                    steps = 1;
+                }
+
+                switch (this._direction) {
+                    case 'up':
+                        this._y += steps;
+                        break;
+                    case 'down':
+                        this._y -= steps;
+                        break;
+                    case 'left':
+                        this._x -= steps;
+                        break;
+                    case 'right':
+                        this._x += steps;
+                        break;
+                }
+            }
+
+            backward(steps) {
+                if (typeof steps !== 'number') {
+                    steps = 1;
+                }
+                this.forward(-1 * steps);
+            }
+
+            turnLeft() {
+                const turns = {
+                    up: 'left',
+                    left: 'down',
+                    down: 'right',
+                    right: 'up'
+                };
+                this._direction = turns[this._direction];
+            }
+
+            turnRight() {
+                const turns = {
+                    up: 'right',
+                    right: 'down',
+                    down: 'left',
+                    left: 'up'
+                };
+                this._direction = turns[this._direction];
+            }
+
+            toString() {
+                return '(' + this._x + ', ' + this._y + ')';
+            }
+        }
+    </script>
+</body>
+</html>

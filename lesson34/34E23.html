@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34E23</title>
+</head>
+<body>
+    <script>
+        class Passport {
+            constructor(person, country, expirationDate) {
+                if (!(person instanceof Person)) throw new Error('Invalid person');
+                if (!(country instanceof Country)) throw new Error('Invalid country');
+                if (!(expirationDate instanceof Date)) throw new Error('Invalid date');
+                this._person = person;
+                this._country = country;
+                this._expirationDate = expirationDate;
+            }
+
+            get person() {
+                return this._person;
+            }
+
+            get country() {
+                return this._country;
+            }
+
+            get expirationDate() {
+                return this._expirationDate;
+            }
+
+            verify(person) {
+                return this._person === person;
+            }
+
+            get expired() {
+                return new Date() > this._expirationDate;
+            }
+
+            toString() {
+                const isAdult = this._person.age >= 18 ? 'Yes' : 'No';
+                return this._person.name + " | " + this._person.age + " years old | " + this._country.name + " | Adult: " + isAdult;
+            }
+        }
+
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        class Country {
+            constructor(name, population, flagColors) {
+                this.name = name;
+                this.population = population;
+                this.flagColors = flagColors;
+            }
+        }
+
+        var bob = new Person("Bob", 28);
+        var canada = new Country("Canada", 122334, ["red", "white"]);
+        var passport = new Passport(bob, canada, new Date("3000-01-01"));
+        console.log(passport.toString());
+    </script>
+</body>
+</html>

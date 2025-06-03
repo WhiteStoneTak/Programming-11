@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34E27</title>
+</head>
+<body>
+    <script>
+        class TextEffect {
+            constructor(effectFunction) {
+                if (typeof effectFunction !== 'function') throw new Error('Effect must be a function');
+                this.effectFunction = effectFunction;
+            }
+
+            apply(text) {
+                return this.effectFunction(text);
+            }
+        }
+
+        class TextSegment {
+            constructor(content, effect = null) {
+                if (typeof content !== 'string') throw new Error('Content must be a string');
+                this.content = content;
+                this.effect = effect;
+            }
+
+            toString() {
+                return this.effect ? this.effect.apply(this.content) : this.content;
+            }
+        }
+
+        class Text {
+            constructor(segments) {
+                this.segments = segments;
+            }
+
+            toString() {
+                return this.segments.map(segment => 
+                    segment instanceof TextSegment ? segment.toString() : segment
+                ).join("");
+            }
+        }
+
+        var uppercase = new TextEffect(s => s.toUpperCase());
+        var bracketed = new TextEffect(s => "[" + s + "]");
+        var segment1 = new TextSegment("Hello there!", null);
+        var segment2 = new TextSegment("I am Bob", uppercase);
+        var segment3 = new TextSegment("fruits", bracketed);
+        var segment4 = new TextSegment("goodbye!", uppercase);
+
+        var text = new Text([
+            segment1,
+            " I am ",
+            segment2,
+            ", and I love ",
+            segment3,
+            "!",
+            " I need to go now, ",
+            segment4,
+        ]);
+
+        console.log(text.toString()); 
+    </script>
+</body>
+</html>

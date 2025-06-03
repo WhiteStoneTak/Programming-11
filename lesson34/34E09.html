@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Citation: https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34E09</title>
+</head>
+<body>
+    <p>
+        Click the button to execute the "hello" function again, you will see that this time 
+        "this" represents the button object.
+    </p>
+    <button id="btn">Click Me!</button>
+    <p id="output"></p>
+    <hr>
+    <button id="btn2">What about this?</button>
+    <script>
+        var hello;
+        hello = function() {
+            document.getElementById("output").innerHTML += this;
+        }
+        window.addEventListener("load", hello);
+        document.getElementById("btn").addEventListener("click", hello);
+
+        var goodBye;
+        goodBye = function() {
+            let messages = [
+                "Goodbye, cruel world!",
+                "Adiós, amigo!",
+                "Sayonara from the button!",
+                "So long and thanks for all the clicks!",
+                "Hasta la vista, baby!",
+                "Bye from the <b>" + this.tagName + "</b> button!"
+            ];
+            let randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("output").innerHTML += "<p>" + randomMessage + "</p>";
+        };
+        window.addEventListener("load", goodBye);
+        document.getElementById("btn2").addEventListener("click", goodBye);
+    </script>
+</body>
+</html>

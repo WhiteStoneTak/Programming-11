@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>36E28</title>
+</head>
+<body>
+  <script>
+    function fillBottles(input) {
+      const lines = input.split("\n");
+      const output = [];
+      let insideBottle = false;
+
+      for (let line of lines) {
+        if (line.includes("|") && line.includes("-")) {
+          output.push(line);
+          insideBottle = false;
+        } else if (line.includes("|")) {
+          insideBottle = true;
+          line = line.replace(/ \|/g, "#|").replace(/\| /g, "|#");
+          output.push(line);
+        } else if (line.includes("-") && insideBottle) {
+          output.push(line);
+          insideBottle = false;
+        } else {
+          output.push(line);
+          insideBottle = false;
+        }
+      }
+      return output.join("\n");
+    }
+
+    const asciiInput = `
+    |        |   |   |
+    |        |   |   |
+    -----------   ---
+    | |
+    -------
+    | - |
+    --------
+    `;
+
+    const result = fillBottles(asciiInput);
+    console.log(result);
+  </script>
+</body>
+</html>

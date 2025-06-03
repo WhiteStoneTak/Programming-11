@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32E23</title>
+</head>
+<body>
+    <script>
+        function myFunction(arr, key) {
+            var result = {};
+            for (var i = 0; i < arr.length; i++) {
+                var value = arr[i][key];
+                if (!result[value]) {
+                    result[value] = [];
+                }
+                result[value].push(arr[i]);
+            }
+            return result;
+        }
+
+        var objects = [{name: "John", age: 25}, {name: "Jane", age: 25}, {name: "Mike", age: 30}];
+        console.log(myFunction(objects, "age"));
+    </script>
+</body>
+</html>

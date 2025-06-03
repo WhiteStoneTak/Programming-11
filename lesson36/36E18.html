@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>36E18</title>
+</head>
+<body>
+  <script>
+    const student = {
+      fullName: "John Smith",
+      grade: 10,
+      studentId: 123456,
+      getID() {
+        return "nw" + this.studentId;
+      },
+      set setID(newID) {
+        if (Number.isInteger(newID)) {
+          this.studentId = newID;
+        } else {
+          console.error("Invalid ID: Must be an integer.");
+        }
+      }
+    };
+
+    student.setID = 654321; 
+    console.log(student.getID()); 
+
+    student.setID = "invalid";
+    console.log(student.getID());
+  </script>
+</body>
+</html>

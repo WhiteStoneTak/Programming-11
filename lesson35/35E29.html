@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35E29</title>
+</head>
+<body>
+    <script>
+        function generateGrid(width, height) {
+            var grid = '';
+            for (var i = 0; i < height; i++) {
+                grid += '#'.repeat(width) + '\n';
+            }
+            return grid.trim();
+        }
+
+        function analyzeGrid(width, height) {
+            var sums = [];
+            for (var i = 0; i < 10000; i++) {
+                var grid = generateGrid(width, height);
+                var countHash = (grid.match(/#/g) || []).length;
+                var countStar = (grid.match(/\*/g) || []).length;
+                sums.push(countHash + countStar);
+            }
+            sums.sort(function(a, b) { return a - b; });
+            var mid = Math.floor(sums.length / 2);
+            return sums.length % 2 === 0 ? (sums[mid - 1] + sums[mid]) / 2 : sums[mid];
+        }
+    </script>
+</body>
+</html>

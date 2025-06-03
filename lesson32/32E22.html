@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32E22</title>
+</head>
+<body>
+    <script>
+        function objTypes(obj) {
+            var result = {};
+            for (var key in obj) {
+                result[key] = typeof obj[key];
+            }
+            return result;
+        }
+
+        var obj = {a: 1, b: true, cde: "a", f: null, gh: undefined};
+        console.log(objTypes(obj));
+    </script>
+</body>
+</html>

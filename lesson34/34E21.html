@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34E21</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this._name = name;
+                this._age = age;
+                this.friends = [];
+            }
+
+            get name() {
+                return this._name;
+            }
+
+            get age() {
+                return this._age;
+            }
+
+            get isAdult() {
+                return this._age >= 18;
+            }
+
+            get isChild() {
+                return this._age < 18;
+            }
+
+            isFriend(person) {
+                return this.friends.includes(person);
+            }
+
+            addFriend(person) {
+                if (!this.isFriend(person)) {
+                    this.friends.push(person);
+                }
+            }
+
+            birthday() {
+                this._age += 1;
+            }
+        }
+
+        const p1 = new Person("Bob", 20);
+        const p2 = new Person("Alice", 17);
+
+        console.log(p1.name);
+        console.log(p1.isFriend(p2)); 
+        p1.addFriend(p2);
+        console.log(p1.isFriend(p2)); 
+        console.log(p2.isFriend(p1)); 
+        console.log(p1.isAdult); 
+        console.log(p2.isChild); 
+        p2.birthday();
+        console.log(p2.age); 
+        console.log(p2.isAdult); 
+    </script>
+</body>
+</html>
