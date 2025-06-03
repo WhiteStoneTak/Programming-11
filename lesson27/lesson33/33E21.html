@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33E21</title>
+</head>
+<body>
+    <script>
+        function replaceAwithB(arr) {
+            return arr.map(item => {
+                if (typeof item === 'string') {
+                    return item.replace(/a/g, 'b');
+                } else {
+                    throw new Error("Invalid input.");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27E12</title>
+</head>
+<body>
+    <h1>How many clookies?</h1>
+    <p>
+        <div id="total">?</div>
+        <button type="button" onclick="myFunction()">calculate</button>
+    </p>
+    <script>
+        var myCookies, otherCookies, totalCookies;
+        myCookies = 6;
+        otherCookies = 4;
+        totalCookies = myCookies + otherCookies;
+
+        function myFunction() {
+            document.getElementById("total").innerHTML = "" + totalCookies + "";
+        }
+    </script>
+</body>
+</html>

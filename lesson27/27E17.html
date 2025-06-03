@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27E17</title>
+</head>
+<body>
+    <h1>Are you good at math?</h1>
+    <h2>
+        2x + 3y = <span id="answer_1"></span><br>
+        7y + 6 = <span id="answer_2"></span>
+    </h2>
+    <h3>What is X and Y?</h3>
+    <button type="button" onclick="window.alert(''+x+'')">Show X</button>
+    <button type="button" onclick="window.alert(''+y+'')">Show Y</button>
+    <script>
+        var x, y;
+        x = 2;
+        y = 3;
+        document.getElementById("answer_1").innerHTML = 2 * x + 3 * y;
+        document.getElementById("answer_2").innerHTML = 7 * y + 6;
+    </script>
+</body>
+</html>

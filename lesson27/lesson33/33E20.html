@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33E20</title>
+</head>
+<body>
+    <script>
+        function guessTheNumber(x) {
+            try {
+                if (x !== 3) {
+                    throw new Error("Wrong number");
+                    console.log(Error);
+                }
+            } catch (err) {
+                console.log(err.message);
+            } finally {
+                console.log("Good game!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33E07</title>
+</head>
+<body>
+    <h2 id="h2">
+        Please visit Microsoft and Microsoft.
+    </h2>
+    <button onclick="replaceText()">Try it</button>
+    <script>
+        function replaceText() {
+            var text = document.getElementById('h2').innerHTML;
+            text = text.replace(/Microsoft/g, 'W3Schools');
+            document.getElementById('h2').innerHTML = text;
+        }
+    </script>
+</body>
+</html>

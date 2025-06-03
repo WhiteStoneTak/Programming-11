@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Citation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33E09</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        var num = "x";
+        try {
+            var tryVal = "x = y + 5";
+            eval(tryVal);
+        } catch (err) {
+            document.getElementById("output").innerHTML = err.name;
+        }
+    </script>
+</body>
+</html>

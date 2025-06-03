@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33E08</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        var num = "1";
+        try {
+            var result = num.toPrecision(800);
+            document.write(result);
+        } catch (err) {
+            document.getElementById("output").innerHTML = err.name;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33E27</title>
+</head>
+<body>
+    <script>
+        function viewFloor(floor) {
+            if (typeof floor !== "number") {
+                throw new Error("Floor " + floor + " is not a valid floor.");
+            }
+            var floors = {
+                1: ["Grand Commons", "Office", "Entrance"],
+                1.5: ["Learning Commons"],
+                2: ["Classrooms", "Breakout Rooms"],
+                3: ["Classrooms", "Breakout Rooms", "Bees"]
+            };
+            if (floor === "B") {
+                throw new Error("THE NWSS BASEMENT DOES NOT EXIST. IGNORE ANYONE WHO SAYS OTHERWISE.");
+            }
+            if (!floors[floor]) {
+                throw new Error("Floor " + floor + " is not a valid floor.");
+            }
+            return floors[floor];
+        }
+
+        console.log(viewFloor(1.5));
+    </script>
+</body>
+</html>

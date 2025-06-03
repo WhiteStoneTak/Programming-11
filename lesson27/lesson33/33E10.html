@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- Check this later -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33E10</title>
+</head>
+<body>
+    <h2 id="output">Green</h2>
+    <script>
+        console.log("Green");
+        try {
+            eval("alert("Yellow)");
+        } catch (err) {
+            document.getElementById("output").innerHTML = err.name;
+            console.log(err.name);
+        }
+    </script>
+</body>
+</html>

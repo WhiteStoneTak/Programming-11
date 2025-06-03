@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27E24</title>
+</head>
+<body>
+    <!-- I gave them different id because id is disposable -->
+    <span id="decreasing_bottles1">99</span>bottles of JS on the wall, <span id="decreasing_bottles2">99</span> bottles of JS;
+    <button type="button" onclick="myFunction()">Take one down, pass it around</button>
+    <script>
+        var count = 99;
+        
+        function myFunction() {
+            count -= 1;
+            document.getElementById("decreasing_bottles1").innerHTML = count;
+            document.getElementById("decreasing_bottles2").innerHTML = count;
+        }
+    </script>
+</body>
+</html>
