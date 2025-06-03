@@ -1,0 +1,41 @@
+A {
+    text-decoration: overline;
+}
+
+BODY {
+    background-color: yellow;
+    font-family: Arial;
+    background-image: url("https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-07/pinkytile.jpg");
+    background-attachment: fixed;
+}
+
+UL{
+    font-family: Garamond;
+    font-size: 15pt;
+    color: white;
+    height: 150px;
+    width: 300px;
+    background: lightgreen;
+    background-image: url("https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-07/tan.jpg");
+    text-align: right;
+}
+
+.title {
+    font-family: Verdana;
+    font-size: 40pt;
+    color: mediumpurple;
+    background-image: url("https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-07/dolphins.jpg");
+    text-transform: uppercase;
+}
+
+.instructions {
+    font-size: 10pt;
+}
+
+.warning {
+    background-color: blue;
+}
+
+.capitals {
+    text-transform: uppercase;
+}

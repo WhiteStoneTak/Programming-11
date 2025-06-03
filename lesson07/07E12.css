@@ -1,0 +1,33 @@
+/* こっちがcss */
+
+.first {
+    color: red;
+    font-family: Comic Sans MS;
+}
+
+.second {
+    font-family: Verdana;
+    font-size: 30pt;
+}
+
+.third {
+    font-family: Arial;
+    background-color: violet;
+    color: white;
+}
+
+.fourth {
+    color: fuchsia;
+    background-image: url("https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-07/greenytile.gif");
+}
+
+.fifth {
+    font-family: Garamond;
+    text-align: right;
+}
+
+.sixth {
+    color: blue;
+    font-size: 50pt;
+    text-align: center;
+}
