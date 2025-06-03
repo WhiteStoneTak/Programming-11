@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14A05d</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .left {
+            background-color: #2196F3;
+            padding: 20px;
+            float: left;
+            width: 20%; /* The width is 20%, by default */
+        }
+
+        .main {
+            background-color: f1f1f1;
+            padding: 20px;
+            float: left;
+            width: 60%; /* The width is 60%, by default */
+        }
+
+        .right {
+            background-color: 4CAF50;
+            padding: 20px;
+            float: left;
+            width: 20%; /* The width is 20%, by default */
+        }
+
+        /* Use a media query to add a break point at 800px: */
+        @media (max-width:800px) {
+            .left, .main, .right {
+                width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CANADA</h1>
+    <p>Canada is a country in the northern part of North America. Its ten provinces and three territories extend
+    from the Atlantic to the Pacific and northward into the Arctic Ocean, covering 9.98 million square kilometres 
+    with the United States, stretching some 8,891 kilometres (5,521 mi), is the world's longest bi-national land 
+    border. Canada's capital its Ottawa, and its largest metropolitian areas are Toronto, Montreal, and 
+    Vancouver.</p>
+    <p>Here are the three largest metropolitian areas: </p>
+    <div class="left">
+        <p><a href="https://www.toronto.ca/">Toronto</a></p>
+    </div>
+    <div class="main">
+        <p><a href="https://vancouver.ca/">Vancouver</a></p>
+    </div>
+    <div class="right">
+        <p><a href="https://beta.montreal.ca/">Montreal</a></p>
+    </div>
+</body>
+</html>

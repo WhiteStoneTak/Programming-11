@@ -1,0 +1,158 @@
+<html>
+<head>
+    <title>11E05</title>
+    <style>
+        table {
+            background-color: #fefec8;
+            border-top: 5px solid #ffa404;
+            width: 100%;
+        }
+
+        tr {
+            text-align: center;
+        }
+
+        button {
+            background-color: white;
+        }
+
+        .title {
+            font-size: 50px;
+            font-family: Comic Sans MS;
+            text-transform: uppercase;
+        }
+
+        .sub {
+            height: 50px;
+            font-size: 18pt;
+        }
+
+        .button {
+            height: 40px;
+        }
+
+        .image {
+            width: 500px;
+            height: 500px;
+        }
+
+        #mango {
+            width: 400px;
+            height: 260px;
+        }
+
+        #ya {
+            width: 300px;
+            height: 400px;
+        }
+
+        #gather_height {
+            height: 0;
+        }
+
+        #description_height {
+            height: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <table id="table">
+        <tr id="image1">
+            <td valign="middle"><img src="https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/mango.png" alt="mago" id="mango"></td>
+        </tr>
+        <tr>
+            <td class="title" valign="middle"><b>mango pudding recipe!!</b></td>
+        </tr>
+        <tr>
+            <td class="sub" valign="middle">Mango padding is my favorite thing to make! Here's how to do it:</td>
+        </tr>
+        <tr class="button">
+            <td valign="bottom">
+                <button type="button" onclick="myFunction1()">Step 1</button>
+                <button type="button" onclick="myFunction2()">Step 2</button>
+                <button type="button" onclick="myFunction3()">Step 3</button>
+                <button type="button" onclick="myFunction4()">Step 4</button>
+                <button type="button" onclick="myFunction5()">Step 5</button>
+                <button type="button" onclick="myFunction6()">Step 6</button>
+            </td>
+        </tr>
+        <tr id="gather_height">
+            <td id="gather"  valign="bottom"></td>
+        </tr>
+        <tr id="description_height">
+            <td id="description"  valign="bottom"></td>
+        </tr>
+        <tr id="image2_height">
+            <td id="image2"  valign="bottom"><img src="https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/ya.png" alt="cooking" id="ya"></td>
+        </tr>
+    </table>
+    <script>
+        function myFunction1() {
+            document.getElementById("image1").innerHTML="";
+            document.getElementById("table").style.borderTop="none";
+            document.getElementById("gather").innerHTML="Gather all your indigredients.";
+            document.getElementById("gather_height").style.height="75px";
+            document.getElementById("description").innerHTML="You will need: <b>3 large mangos(to puree), 1 envelope of Gelatin, 1/2 cup of hot water, 1/4 cup of suger, 1 cup of coconut milk</b>";
+            document.getElementById("description_height").style.height="60px";
+            document.getElementById("image2").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/step1.jpg' alt='step1' class='image'>";
+            document.getElementById("image2_height").style.height="535px";
+        }
+
+        function myFunction2() {
+            document.getElementById("image1").innerHTML="";
+            document.getElementById("table").style.borderTop="none";
+            document.getElementById("gather").innerHTML="";
+            document.getElementById("gather_height").style.height="0";
+            document.getElementById("description").innerHTML="In seperate bowl, add the gelatin powder to hot water and mix well until dissolved";
+            document.getElementById("description_height").style.height="60px";
+            document.getElementById("image2").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/step2.jpg' alt='step2' class='image'>";
+            document.getElementById("image2_height").style.height="535px";
+        }
+
+        function myFunction3() {
+            document.getElementById("image1").innerHTML="";
+            document.getElementById("table").style.borderTop="none";
+            document.getElementById("gather").innerHTML="";
+            document.getElementById("gather_height").style.height="0";
+            document.getElementById("description").innerHTML="Add suger and coconut milk and stir until suger is completely dissolved.";
+            document.getElementById("description_height").style.height="60px";
+            document.getElementById("image2").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/actualstep3.jpg' alt='step3' class='image'>";
+            document.getElementById("image2_height").style.height="535px";
+        }
+
+        function myFunction4() {
+            document.getElementById("image1").innerHTML="";
+            document.getElementById("table").style.borderTop="none";
+            document.getElementById("gather").innerHTML="";
+            document.getElementById("gather_height").style.height="0";
+            document.getElementById("description").innerHTML="Add the mango puree and mix well";
+            document.getElementById("description_height").style.height="60px";
+            document.getElementById("image2").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/step3.jpg' alt='step4' class='image'>";
+            document.getElementById("image2_height").style.height="535px";
+        }
+        
+        function myFunction5() {
+            document.getElementById("image1").innerHTML="";
+            document.getElementById("table").style.borderTop="none";
+            document.getElementById("gather").innerHTML="";
+            document.getElementById("gather_height").style.height="0";
+            document.getElementById("description").innerHTML="Pour into shallow bowls and let sitin refirgertor for at least two hours.";
+            document.getElementById("description_height").style.height="60px";
+            document.getElementById("image2").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/step5.jpg' alt='step5' class='image'>";
+            document.getElementById("image2_height").style.height="535px";
+        }
+        
+        function myFunction6() {
+            document.getElementById("image1").innerHTML="";
+            document.getElementById("table").style.borderTop="none";
+            document.getElementById("gather").innerHTML="";
+            document.getElementById("gather_height").style.height="0";
+            document.getElementById("description").innerHTML="Enjoy!";
+            document.getElementById("description_height").style.height="60px";
+            document.getElementById("image2").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/step6.jpg' alt='step6' class='image'>";
+            document.getElementById("image2_height").style.height="535px";
+        }
+    </script>
+</body>
+</html>

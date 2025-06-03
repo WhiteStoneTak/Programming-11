@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>11E07</title>
+    <style>
+        #body {
+            font-family: Cambria;
+        }
+
+        #line_1 {
+            color: red;
+            font-size: 40pt;
+        }
+
+        #line_2 {
+            color: blue;
+            font-size: 30pt;
+        }
+
+        #line_3 {
+            color: yellow;
+            font-size: 20pt;
+        }
+
+        .space {
+            height: 350px;
+        }
+
+        #title {
+            height: 0;
+            font-size: 40pt;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div id="title"></div>
+    <div id="line_1">Oh man I sure love JavaScript</div>
+    <div id="line_2">JavaScript is my favorite thing in the world</div>
+    <div id="line_3">What would I do without JavaScript</div>
+    <div id="button">
+        <button type="button" onclick="myFunction1()">Click me to find out what I would do without JavaScript!</button>
+    </div>
+    <script>
+        function myFunction1() {
+            document.getElementById("body").style.backgroundColor="black";
+            document.getElementById("line_1").style.color="white";
+            document.getElementById("line_1").style.fontSize="100%";
+            document.getElementById("line_1").innerHTML="what have you done? You've erased my beautiful website!<div class='space'></div>";
+            document.getElementById("line_2").style.color="white";
+            document.getElementById("line_2").style.fontSize="100%";
+            document.getElementById("line_2").innerHTML="<b>What am I gonna do? I have seven children to feed!</b><div class='space'></div>";
+            document.getElementById("line_3").style.color="white";
+            document.getElementById("line_3").style.fontSize="100%";
+            document.getElementById("line_3").innerHTML="<b>You're gonna have to help me make a new website.</b>";
+            document.getElementById("button").innerHTML="<button type='button' onclick='myFunction2()'>Click me to make a new website</button>";
+        }
+
+        function myFunction2() {
+            document.getElementById("body").style.backgroundColor="white";
+            document.getElementById("line_1").style.color="black";
+            document.getElementById("line_1").innerHTML="Ok, This is a blank page. What are we gonna put on here?<button type='button' onclick='myFunction3()'>A title</button><button type='button' onclick='myFunction4()'>A nice background</button>";
+            document.getElementById("line_2").style.color="black";
+            document.getElementById("line_2").innerHTML="";
+            document.getElementById("line_3").style.color="black";
+            document.getElementById("line_3").innerHTML="";
+            document.getElementById("button").innerHTML="";
+        }
+
+        function myFunction3() {
+            document.getElementById("title").style.height="auto";
+            document.getElementById("title").innerHTML="<div class='title'>Why JavaScript is Great</div>";
+            document.getElementById("line_1").style.position="absolute";
+            document.getElementById("line_1").style.top="140px";
+            document.getElementById("line_1").innerHTML="Ok, we have our Title.<br /><button type='button' onclick='myFunction5()'>Now What?</button>";
+        }
+
+        function myFunction4() {
+            document.getElementById("body").style.backgroundImage="url('bg3.jfif')";
+            document.getElementById("line_1").style.color="white";
+            document.getElementById("line_1").style.position="absolute";
+            document.getElementById("line_1").innerHTML="Ok, now there's a nice background. <br /><button type='button' onclick='myFunction5()'>Now What</button>";
+            document.getElementById("line_2").style.color="white";
+            document.getElementById("line_3").style.color="white";
+        }
+
+        function myFunction5(){
+            document.getElementById("line_2").style.position="absolute";
+            document.getElementById("line_2").style.top="220px";
+            document.getElementById("line_2").innerHTML="Might as well explain why JavaScript is so nice.<br /><button type='button' onclick='myFunction6()'>Ok</buton>";
+            document.getElementById("line_3").style.position="absolute";
+            document.getElementById("line_3").style.top="500px";
+        }
+
+        function myFunction6() {
+            document.getElementById("line_1").style.top="110px";
+            document.getElementById("line_1").innerHTML="Javascript is a wonderful tool you can use to make your webpages more dynamic and interesting for the viewer. However, proper understanding of the mechanics is imperative to proper usage of such a powerful tool.";
+            document.getElementById("line_2").innerHTML="<button type='button' onclick='myFunction7()'>Very nice, keep going...</button>";
+        }
+
+        function myFunction7() {
+            document.getElementById("line_2").style.top="300px";
+            document.getElementById("line_2").innerHTML="Javascript can complement your webpage's designs when used correctly. Therefore, it is important to make sure you fully understand the concept of Javascript before attempting anything crazy with it.";
+            document.getElementById("line_3").innerHTML="<button type='button' onclick='myFunction8()'>Looks Good!</button>";
+        }
+
+        function myFunction8() {
+            document.getElementById("line_3").innerHTML="Thanks for your hard work. I like this webpage.";
+        }
+
+    </script>
+</body>
+</html>

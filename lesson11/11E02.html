@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>11E02</title>
+    <style>   
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .title {
+            font-size: 50px;
+        }
+
+        .button {
+            position: absolute;
+            top: 100px;
+        }
+
+        #description {
+            font-size: 15pt;
+            position: absolute;
+            top: 200px;
+        }
+
+        .list {
+            position: absolute;
+            left: -25px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="title">Here are my best singers:</div>
+    <div class="button">
+        <button type="button" onclick="myFunction1()">ColdPlay</button>
+        <button type="button" onclick="myFunction2()">Morgan Wallen</button>
+        <button type="button" onclick="myFunction3()">Billie Eilish</button>
+        <button type="button" onclick="myFunction4()">Zack Bryan</button>
+        <button type="button" onclick="myFunction5()">Jelly Roll</button>
+    </div>
+    <div id="description"></div>
+    <script>
+        function myFunction1() {document.getElementById("description").innerHTML="Coldplay are a British rock band formed in London in 1997. They consist of vocalist and pianist Chris Martin, guitarist Jonny Buckland, bassist Guy Berryman, drummer and percussionist Will Champion, and manager Phil Harvey. They are best known for their live performances, and for impacting popolar colture through their artistry, advocacy and achievements.<p><div class='list'><ol><li>Hymn for the Weekend</li><li>Viva La Vida</li><li>A Sky Foll of Stars</li></ol></div>";}
+        function myFunction2() {document.getElementById("description").innerHTML="Morgan Cole Wallen (born May 13, 1993) is an American country pop singer. He competed in the sixth season of The Voice, originally as a member of Usher's team, but later as a member of Adam Levine's team. After being eliminated in the playoffs of that season, he signed to Panacea Records, releasing his debut EP, Stand Alone, in 2015.<p><div class='list'><ol><li>Cowgirls</li><li>Thinkin' Bout Me</li><li>Last Night</li></ol></div>";}
+        function myFunction3() {document.getElementById("description").innerHTML="Billie Eilish Pirate Baird O'Connell (/ˈaɪlɪʃ/ EYE-lish; born December 18, 2001) is an American singer and songwriter. She first gained public attention in 2015 with her debut single <q>Ocean Eyes</q>, written and produced by her brother Finneas O'Connell, with whom she collaborates on music and live shows. In 2017, she released her debut extended play (EP), Don't Smile at Me. Commercially successfol, it reached the top 15 of record charts in numerous countries, including the US, UK, Canada, and Australia.<p><div class='list'><ol><li>lovely</li><li>BLUE</li><li>LUNCH</li></ol></div>";}
+        function myFunction4() {document.getElementById("description").innerHTML="Zachary Lane Bryan (born April 2, 1996) is an American country music singer-songwriter from Oologah, Oklahoma.<p><div class='list'><ol><li>Something in the Orange</li><li>Pink Skies</li><li>I Remember Everything</li></ol></div>"}
+        function myFunction5() {document.getElementById("description").innerHTML="Jason Bradley DeFord (born December 4, 1984), known professionally as Jelly Roll (originally stylized as JellyRoll), is an American singer, rapper, and songwriter from Antioch, Tennessee. Beginning his career in 2003, he rose to mainstream prominence following the release of his 2022 singles <q>Son of a Sinner</q> and <q>Need a Favor</q>.<p><div class='list'><ol><li>Wild Ones</li><li>Save Me</li><li>All My Life</li></ol></div>";}
+    </script>
+</body>
+</html>

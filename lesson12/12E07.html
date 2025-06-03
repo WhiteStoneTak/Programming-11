@@ -1,0 +1,98 @@
+<html>
+<head>
+    <meta http-equiv="refresh" content="10">
+    <title>12E07</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 20px 5px 20px;
+        }
+
+        #button {
+            position: relative;
+            top: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--This should be center aligned-->
+    This page will refresh in 10 seconds. Hurry! <br />
+    <div id="button">
+        <!--Start Button-->
+        <button type="button" onclick="myFunction1()">Click Me!</button>
+    </div>
+
+    <script>
+        function myFunction1() {
+            document.getElementById("button").style.position="absolute";
+            document.getElementById("button").style.left="499px";
+            document.getElementById("button").style.top="265px";
+            document.getElementById("button").innerHTML="<!--First Button--><button type='button' onclick='myFunction2()'>1</button>";
+        }
+        
+        function myFunction2() {
+            document.getElementById("button").style.left="30px";
+            document.getElementById("button").style.top="40px";
+            document.getElementById("button").innerHTML="<!--Second Button--><button type='button' onclick='myFunction3()'>2</button>";
+        }
+        
+        function myFunction3() {
+            document.getElementById("button").style.left="1209px";
+            document.getElementById("button").style.top="170px";
+            document.getElementById("button").innerHTML="<!--Third Button--><button type='button' onclick='myFunction4()'>3</button>";
+        }
+        
+        function myFunction4() {
+            document.getElementById("button").style.left="470px";
+            document.getElementById("button").style.top="582px";
+            document.getElementById("button").innerHTML="<!--Fourth Button--><button type='button' onclick='myFunction5()'>4</button>";
+        }
+        
+        function myFunction5() {
+            document.getElementById("button").style.left="488px";
+            document.getElementById("button").style.top="6px";
+            document.getElementById("button").innerHTML="<!--Fifth Button--><button type='button' onclick='myFunction6()'>5</button>";
+        }
+        
+        function myFunction6() {
+            document.getElementById("button").style.left="295px";
+            document.getElementById("button").style.top="91px";
+            document.getElementById("button").innerHTML="<!--Sixth Button--><button type='button' onclick='myFunction7()'>6</button>";
+        }
+        
+        function myFunction7() {
+            document.getElementById("button").style.left="900px";
+            document.getElementById("button").style.top="48px";
+            document.getElementById("button").innerHTML="<!--Seventh Button--><button type='button' onclick='myFunction8()'>7</button>";
+        }
+        
+        function myFunction8() {
+            document.getElementById("button").style.left="489px";
+            document.getElementById("button").style.top="534px";
+            document.getElementById("button").innerHTML="<!--Eighth Button--><button type='button' onclick='myFunction9()'>8</button>";
+        }
+        
+        function myFunction9() {
+            document.getElementById("button").style.left="872px";
+            document.getElementById("button").style.top="133px";
+            document.getElementById("button").innerHTML="<!--Ninth Button--><button type='button' onclick='myFunction10()'>9</button>";
+        }
+        
+        function myFunction10() {
+            document.getElementById("button").style.left="1081px";
+            document.getElementById("button").style.top="655px";
+            document.getElementById("button").innerHTML="<!--Tenth Button--><button type='button' onclick='myFunction11()'>10</button>";
+        }
+        
+        function myFunction11() {
+            document.getElementById("button").style.position="relative";
+            document.getElementById("button").style.top="0px";
+            document.getElementById("button").style.left="auto";
+            document.getElementById("button").innerHTML="<p>Ok. You Win. Here's a trophy for your hand work. <br /><img src='trophy.jfif' alt='trophy'> <br /><a href='12E07.html'>Click this link to take you to the next game.</a></p>";
+        }
+    </script>
+</body>
+</html>

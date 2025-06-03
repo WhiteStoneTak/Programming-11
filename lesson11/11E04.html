@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>11E04</title>
+    <style>
+        
+        BODY {
+            background-image: url('https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/world.jpg');
+            color: black;
+            text-align: center;
+        }
+
+        IMG {
+            height: 512px;
+            width: 512px;
+        }
+
+        .title {
+            font-size: 38pt;
+        }
+
+        .blue {
+            color: blue;
+        }
+        
+        .red {
+            color: red;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .aqua {
+            color: aqua;
+        }
+
+        #description {
+            position: relative;
+            top: 100px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="blue">Places</span> <span class="red">I</span> Want <span class="yellow">to</span> <span class="green">Travel</span> <span class="aqua">To</span><br />
+    </div>
+
+    <button type="button" onclick="myFunction1()">Hawaii, USA</button>
+    <button type="button" onclick="myFunction2()">Disneyworld Orlando</button>
+    <button type="button" onclick="myFunction3()">Singapore</button>
+    <button type="button" onclick="myFunction4()">Cabo, Mexico</button>
+
+    <div id="description">
+        <img src="https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/earth.png" alt="The Earth">
+    </div>
+
+    <script>
+        function myFunction1() {
+            document.getElementById("description").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/hawaii.jpg' alt='Hawaii'><p><br /><b>The gorgeous scenery, aloha spirit, stunning beaches, and exciting activities are just a few of the reasons Hawaii is continually rated as a top vacation destination. Plus, it's also the perfect place to relax, unwind and disconnect from your daily routine.</b>";
+        }
+
+        function myFunction2() {
+            document.getElementById("description").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/disney.jpg' alt='Disney'><p><br /><b>The Walt Disney World in Lake Buena Vista near Orlando, Florida is the world's most visited family-friendly destination. As big as the city of San Francisco, the complex encompasses several theme parks, many themed hotels and resorts, two water parks, and more!</b>";
+        }
+
+        function myFunction3() {
+            document.getElementById("description").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/singapore.jpg' alt='Singapore'><p><br /><b>Whether you're an insatiable foodie, a lover of the arts or an irrepressible daredevil, Singapore's endless possibilities are certain to fuel the fires of your passion.</b>";
+        }
+
+        function myFunction4() {
+            document.getElementById("description").innerHTML="<img src='https://www.liemcomputing.ca/content/Web/00.%20RESOURCES/00-11/cabo.jpg' alt='Cabo'><p><br /><b>There is no bad time to go to Cabo San Lucas. This seaside paradise, set at the southernmost point of the Baja California peninsula, boasts warm weather throughout the year, and an enormous array of high-end resort accommodations and water- based activities options.</b>";
+        }
+    </script>
+</body>
+</html>

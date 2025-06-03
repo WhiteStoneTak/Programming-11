@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13E05</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #777;
+            text-align: center;
+            color: white;
+            font-size: 60pt;
+            padding: 40px;
+        }
+
+        nav:nth-child(1){
+            font-size: 20pt;
+            padding: 10px;
+            float: left;
+            background-color: #999999;
+            height: 200px;
+            width: 20%;
+        }
+
+        .article {
+            float: right;
+            font-size: 14pt;
+            padding: 10px;
+            background-color: #f1f1f1;
+            height: 200px;
+            width: 80%;
+        }
+        #nav2 {
+            font-size: 20pt;
+            padding: 10px;
+            float: right;
+            background-color: #999999;
+            height: 200px;
+            width: 20%;
+        }
+
+        .article2 {
+            float: left;
+            font-size: 14pt;
+            padding: 10px;
+            background-color: #f1f1f1;
+            height: 200px;
+            width: 80%;
+        }
+
+        #image {
+            float: right;
+            height: 100%;
+        }
+        
+        #image2 {
+            float: right;
+            height: 100%;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #777;
+            height: 65px;
+            font-size: 15pt;
+            color: white;
+        }
+
+        section::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        HTML in a nutshell
+    </header>
+    <section>
+        <nav>
+            <div id="nav">
+                <ul>
+                    <li><a onclick="myFunction1()" href="#">The HTML Skelton</a></li>
+                    <li><a onclick="myFunction2()" href="#">The div tag</a></li>
+                    <li><a onclick="myFunction3()" href="#">Images</a></li>
+                    <li><a onclick="myFunction4()" href="#">Body Tags</a></li>
+                </ul>
+            </div>
+        </nav>
+        <article class="article">
+            <div id="image"></div>
+            <div id="description">
+                Welcome! This page will teach you the basics of HTML. Just click on the links to 
+                display bits of information.
+            </div>
+        </article>
+        <nav>
+            <div id="nav2">
+                <ul>
+                    <li><a onclick="myFunction5()" href="#">Frames</a></li>
+                    <li><a onclick="myFunction6()" href="#">Cascading Style Sheets</a></li>
+                    <li><a onclick="myFunction7()" href="#">Dynamic HTML</a></li>
+                    <li><a onclick="myFunction8()" href="#">JavaScript</a></li>
+                </ul>
+            </div>
+        </nav>
+        <article class="article2">
+            <div id="image2"></div>
+            <div id="description2"></div>
+        </article>
+    </section>
+    <footer>
+        Thank you for visiting my website. More topics to come!
+    </footer>
+    <script>
+        function myFunction1() {
+            document.getElementById("description").innerText="The basic HTML skeleton is the set of tags required of every HTML web page you build. The tags that make up the skeleton tell browsers what kind of file it is reading, and without the skeleton HTML files will not be rendered correctly in web browsers.";
+            document.getElementById("image").innerHTML="<img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-13/skeleton.PNG'>";
+        }
+
+        function myFunction2() {
+            document.getElementById("description").innerText="The <div> tag defines a division or a section in an HTML document. The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The <div> tag is easily styled by using the class or id attribute. Any sort of content can be put inside the <div> tag!";
+            document.getElementById("image").innerHTML="<img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-13/div.PNG'>";
+        }
+
+        function myFunction3() {
+            document.getElementById("description").innerText="In order to put a simple image on a web page, we use the <img> element. This is a void element (meaning, it cannot have any child content and cannot have an end tag) that requires two attributes to be useful: src and alt . The src attribute contains a URL pointing to the image you want to embed in the page.";
+            document.getElementById("image").innerHTML="<img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-13/image.PNG'>";
+        }
+
+        function myFunction4() {
+            document.getElementById("description").innerText="The <body> tag defines the document's body. The <body> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. Note: There can only be one <body> element in an HTML document.";
+            document.getElementById("image").innerHTML="<img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-13/body.PNG'>";
+        }
+
+        function myFunction5() {
+            document.getElementById("description2").innerText="An HTML document with frames has a different makeup than an HTML document without frames. A standard document has one HEAD section and one BODY . A document with frames has a HEAD , and a FRAMESET in place of the BODY . The FRAMESET section of a document specifies the layout of views in the main user agent window.";
+            document.getElementById("image2").innerHTML="<img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-13/frames.PNG'>";
+        }
+
+        function myFunction6() {
+            document.getElementById("description2").innerText="CSS(the acronym of 'Cascading Style Sheets') is a language for specifying how documents are presented to users — how they are styled, laid out, etc.";
+            document.getElementById("image2").innerHTML="<img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-13/css.PNG'>";
+        }
+
+        function myFunction7() {
+            document.getElementById("description2").innerText="DHTML stands for a dynamic hypertext markup language. As a mixture of technologies such as HTML, CSS, and javascript, it helps create an interactive and dynamic website. It is built on top of standard web technologies such as HTML, CSS, and Javascript.";
+            document.getElementById("image2").innerHTML="<img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-13/dhtml.PNG'>";
+        }
+
+        function myFunction8() {
+            document.getElementById("description2").innerText="JavaScript is a scripting language used to develop web pages. Developed in Netscape, JS allows developers to create a dynamic and interactive web page to interact with visitors and execute complex actions. It also enables users to load content into a document without reloading the entire page.";
+            document.getElementById("image2").innerHTML="<img src='https://liemcomputing.ca/content/Web/00.%20RESOURCES/00-13/js.PNG'>";
+        }
+    </script>
+</body>
+</html>
