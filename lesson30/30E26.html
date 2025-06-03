@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30E26</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        function replaceFirstAndLast(array, value) {
+            array[0] = value;
+            array[array.length - 1] = value;
+            return array;
+        }
+        console.log(replaceFirstAndLast([1, 2, 3, 4, 5], "A"));
+    </script>
+</body>
+</html>

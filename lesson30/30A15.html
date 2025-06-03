@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30A15</title>
+</head>
+<body>
+    <h2>JavaScript Array.map()</h2>
+    <p>Create a new array by performing a function on each array element.</p>
+    <p id="demo"></p>
+    <script>
+        var numbers1 = [45, 4, 9, 16, 25];
+        var number2 = numbers1.map(myFinction);
+        document.getElementById("demo").innerHTML = number2;
+        function myFunction(value, index, array) {
+            return value * 2;
+        }
+    </script>
+</body>
+</html>

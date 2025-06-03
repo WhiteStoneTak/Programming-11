@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31E28</title>
+</head>
+<body>
+    <script>
+        function verifyPassport(passport) {
+            var { name, age, country, expiry } = passport;
+
+            // Complete All
+            if (name !== "" && age >= 0 && age <= 200 && country.length === 2 &&expiry > new Date()) {
+                return true;
+            };
+
+            // Expired
+            if (expiry < new Date()) {
+                return "expired";
+            }
+
+            // Invalid Country
+            if (country.length !== 2) {
+                return "invalid country";
+            }
+
+            // No Name
+            if (name == "") {
+                return "no name";
+            }
+
+            // Invalid Age
+            if (age >0 || age < 200) {
+                return "invalid age";
+            }
+        }
+
+        console.log(verifyPassport({name: "Bob", age: 20, country: "CA", expiry: new Date("3000-01-01")}));
+    </script>
+</body>
+</html>

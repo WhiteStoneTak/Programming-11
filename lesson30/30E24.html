@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30E24</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        function yell(sentence) {
+            return sentence.split(" ").map(myFunction).join(" ");
+            function myFunction(value) {
+                return value.toUpperCase() + "!!";
+            }
+        }
+        document.getElementById("output").innerHTML = 
+            yell("I am very bored");
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30E18</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        var words = [" one", "two ", " three ", " four", "five "];
+        var trimmed = words.map(myFunction);
+        function myFunction(value) {
+            return value.trim();
+        }
+        document.getElementById("output").innerHTML = trimmed;
+    </script>
+</body>
+</html>

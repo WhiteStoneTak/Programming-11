@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31E20</title>
+</head>
+<body>
+    <h1>Rock! Paper! Scissors!</h1>
+    <button onclick="myFunction()">Play!</button>
+    <h2 id="output"></h2>
+    <script>
+        function myFunction() {
+            var options = ["Rock", "Paper", "Scissors"];
+            var choice = options[Math.floor(Math.random() * 3)];
+            document.getElementById("output").innerText = choice;
+        }
+    </script>
+</body>
+</html>

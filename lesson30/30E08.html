@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30E08</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        var numbers = [95, 14, 18, 36, 65];
+        var over18 = numbers.filter(myFunction);
+        function myFunction(value) {
+            return value > 18;
+        }
+        document.getElementById("output").innerHTML = over18;
+    </script>
+</body>
+</html>

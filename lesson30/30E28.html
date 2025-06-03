@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30E28</title>
+</head>
+<body>
+    <ul>
+        <li id="items"></li>
+        <li id="lengths"></li>
+        <li id="numbers"></li>
+        <li id="strings"></li>
+        <li id="objects"></li>
+        <li id="undefined"></li>
+    </ul>
+    <script>
+        function arrayInfo(array) {
+            return {
+                length: array.length,
+                allNumber: array.every(allNumber),
+                allString: array.every(allString),
+                allObject: array.every(allObject),
+                allUndefined: array.every(allUndefined)
+            };
+            
+            function allNumber(item) {
+                return typeof item === 'number';
+            }
+            
+            function allString(item) {
+                return typeof item === 'string';
+            }
+            
+            function allObject(item) {
+                return typeof item === 'object';
+            }
+            
+            function allUndefined(item) {
+                return typeof item === 'undefined';
+            }
+        }
+
+        function displayArrayInfo(array) {
+            var info = arrayInfo(array);
+            document.getElementById("items").innerHTML = array;
+            document.getElementById("lengths").innerHTML = " Length: " + info.length;
+            document.getElementById("numbers").innerHTML = "All Numbers: " + info.allNumber;
+            document.getElementById("strings").innerHTML = "All Strings: " + info.allString;
+            document.getElementById("objects").innerHTML = "All Objects: " + info.allObject;
+            document.getElementById("undefined").innerHTML = "All Undefined: " + info.allUndefined;
+        }
+
+        displayArrayInfo([2, 5, 78]);
+    </script>
+</body>
+</html>

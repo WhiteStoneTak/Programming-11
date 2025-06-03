@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30E06</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        var numbers = [95, 14, 18, 36, 65];
+        console.log(numbers);
+        var result = numbers.map(myFunction).join(", ");
+        document.getElementById("output").innerHTML = result;
+        function myFunction(value) {
+            return value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30E15</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        var people = [
+            { name: "Alice", age: 15 },
+            { name: "Brian", age: 72 },
+            { name: "Franklin", age: 92 },
+            { name: "Elise", age: 5 }
+        ];
+        people.sort(function(a, b){return a.age - b.age;});
+        document.getElementById("output").innerHTML = 
+            "Youngest age is " + people[0].age;
+    </script>
+</body>
+</html>

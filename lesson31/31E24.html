@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31E24</title>
+</head>
+<body>
+    <script>
+        function closeTo(x, y) {
+            var numbers = [x, y];
+            numbers.sort(function(a, b){return a - b;});
+            return numbers[1] - numbers[0] <= 0.100001;
+        }
+    </script>
+</body>
+</html>

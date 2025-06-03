@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Citation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null -->
+    <title>30E23</title>
+</head>
+<body>
+    <script>
+        function countVowels(sentence) {
+            var a = sentence.match(/[aeiou]/gi);
+            if (a === null) {
+                return 0;
+            }
+            return a.length;
+        }
+        console.log(countVowels("Hello there!"));
+    </script>
+</body>
+</html>

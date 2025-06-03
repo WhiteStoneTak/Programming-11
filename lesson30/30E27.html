@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30E27</title>
+</head>
+<body>
+    <script>
+        function arrayInfo(array) {
+            return {
+                length: array.length,
+                allNumber: array.every(allNumber),
+                allString: array.every(allString),
+                allObject: array.every(allObject),
+                allUndefined: array.every(allUndefined)
+            };
+            
+            function allNumber(item) {
+                return typeof item === 'number';
+            }
+            
+            function allString(item) {
+                return typeof item === 'string';
+            }
+            
+            function allObject(item) {
+                return typeof item === 'object';
+            }
+            
+            function allUndefined(item) {
+                return typeof item === 'undefined';
+            }
+        }
+        console.log(arrayInfo([1, 2, 3, 4]));
+    </script>
+</body>
+</html>

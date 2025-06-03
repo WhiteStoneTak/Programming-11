@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30E20</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <script>
+        var words = ["apple", "zebra", "koala", "book"];
+        var charArray = words.map(myFunction);
+        function myFunction(value) {
+            return value[0];
+        }
+        document.getElementById("output").innerHTML = charArray;
+    </script>
+</body>
+</html>
